@@ -1,0 +1,65 @@
+site_name: Open Data Product Standard
+site_url: https://bitol-io.github.io/open-data-product-standard/
+repo_url: https://github.com/bitol-io/open-data-product-standard
+repo_name: open-data-product-standard
+
+plugins:
+  - open-in-new-tab
+  - search
+  - social
+  - awesome-pages
+
+theme:
+  name: material
+  logo: img/Bitol_Logo_icon_color.svg
+  favicon: img/Bitol_Logo_icon_color.svg
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - navigation.path
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
+    - toc.integrate
+    - toc.follow
+  palette:
+    scheme: slate
+  icon:
+    repo: fontawesome/brands/git-alt
+
+nav:
+  - Home: 'home.md'
+  - Standard: 'README.md'
+  - Examples:
+    - 'examples/README.md'
+    - '...'
+  - Changelog: 'changelog.md'
+  - Contributing: 'contributing.md'
+
+extra:
+  social:
+    - icon: fontawesome/brands/slack
+      link: https://join.slack.com/t/aidaug/shared_invite/zt-2d6ypx776-YGqtXwlSlCANhn2EWDmNGQ
+    - icon: fontawesome/brands/github
+      link: https://github.com/bitol-io
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/bitol-io/
+  version:
+    provider: mike
+
+markdown_extensions:
+  - attr_list
+  - def_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

@@ -1,1 +1,6 @@
 /.idea/
+
+docs/changelog.md
+docs/contributing.md
+docs/home.md
+docs/examples/*.md

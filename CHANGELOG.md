@@ -1,6 +1,6 @@
 ---
-title: "Changelog: Open Data Contract Standard (ODCS)"
-description: "Home of Open Data Contract Standard (ODCS) documentation."
+title: "Changelog: Open Data Product Standard (ODPS)"
+description: "Home of Open Data Product Standard (ODPS) documentation."
 image: "https://raw.githubusercontent.com/bitol-io/artwork/main/horizontal/color/Bitol_Logo_color.svg"
 ---
 
