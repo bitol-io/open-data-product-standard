@@ -1,6 +1,6 @@
 ---
-title: "Definition: Open Data Contract Standard (ODCS)"
-description: "Details of the Open Data Contract Standard (ODCS). Includes fundamentals, datasets, schemas, data quality, pricing, stakeholders, roles, service-level agreements and other properties."
+title: "Definition: Open Data Product Standard (ODPS)"
+description: "Details of the Open Data Product Standard (ODPS). Includes fundamentals, datasets, schemas, data quality, pricing, stakeholders, roles, service-level agreements and other properties."
 image: "https://raw.githubusercontent.com/bitol-io/artwork/main/horizontal/color/Bitol_Logo_color.svg"
 ---
 
