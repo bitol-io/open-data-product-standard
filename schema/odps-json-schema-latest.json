@@ -33,7 +33,7 @@
     "status": {
       "type": "string",
       "description": "Current status of the data product.",
-      "enum": ["proposed", "draft", "active", "deprecated", "retired"]
+      "examples": ["proposed", "draft", "active", "deprecated", "retired"]
     },
     "domain": {
       "type": "string",
@@ -66,7 +66,6 @@
     "inputPorts": {
       "type": "array",
       "description": "List of objects describing an input port. You need at least one as a data product needs to get data somewhere.",
-      "minItems": 1,
       "items": {
         "$ref": "#/$defs/InputPort"
       }
@@ -74,7 +73,6 @@
     "outputPorts": {
       "type": "array",
       "description": "List of objects describing an output port. You need at least one, as a data product without output is useless.",
-      "minItems": 1,
       "items": {
         "$ref": "#/$defs/OutputPort"
       }
@@ -297,13 +295,13 @@
         "content": {
           "type": "string",
           "description": "Content type.",
-          "enum": ["discoverability", "observability", "control", "dictionary"]
+          "examples": ["discoverability", "observability", "control", "dictionary"]
         },
         "type": {
           "type": "string",
           "default": "rest",
           "description": "Type: can be `rest` or `topic`. Default is `rest`.",
-          "enum": ["rest", "topic"]
+          "examples": ["rest", "topic"]
         },
         "url": {
           "type": "string",
@@ -359,12 +357,12 @@
         "tool": {
           "type": "string",
           "description": "Name of the tool.",
-          "enum": ["email", "slack", "teams", "discord", "ticket", "other"]
+          "examples": ["email", "slack", "teams", "discord", "ticket", "other"]
         },
         "scope": {
           "type": "string",
           "description": "Scope can be: `interactive`, `announcements`, `issues`.",
-          "enum": ["interactive", "announcements", "issues"]
+          "examples": ["interactive", "announcements", "issues"]
         },
         "invitationUrl": {
           "type": "string",

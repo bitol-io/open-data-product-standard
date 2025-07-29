@@ -2,19 +2,19 @@
 
 | Name                                                             | Company                                 |
 | ---------------------------------------------------------------- | --------------------------------------- |
-| [Jean-Georges Perrin](https://www.linkedin.com/in/jgperrin/)     | Actian                                  |
-| [Peter Flook](https://www.linkedin.com/in/peter-flook-bbb20ab2/) | [Data Catering](https://data.catering/) |
 | Andrea Gioia                                                     |                                         |
 | Andrew Jones                                                     |                                         |
+| Atanas Iliev                                                     |                                         |
 | Christian Foyer                                                  |                                         |
-| Martin Meermeyer                                                 |                                         |
 | Diego Carvallo                                                   |                                         |
-| Manuel DESTOUESSE                                                |                                         |
 | Dirk Van de Poel                                                 |                                         |
 | Gene Stakhov                                                     |                                         |
-| Atanas Iliev                                                     |                                         |
+| [Jean-Georges Perrin](https://www.linkedin.com/in/jgperrin/)     | Actian                                  |
 | Jochen Christ                                                    |                                         |
-| Todd Nemanich                                                    |                                         |
+| Martin Meermeyer                                                 |                                         |
+| Manuel Destousse                                                 |                                         |
 | Praveen Guduri                                                   |                                         |
-| Dr. Simon Harrer                                                 |                                         |
+| [Peter Flook](https://www.linkedin.com/in/peter-flook-bbb20ab2/) | [Data Catering](https://data.catering/) |
+| Simon Harrer, Dr.                                                |                                         |
+| Todd Nemanich                                                    |                                         |
 | Tom De Wolf                                                      |                                         |
