@@ -1,8 +1,10 @@
 name: docs-site-deploy
 on:
   push:
-    branches:
+    tags:
       - '*'
+    branches:
+      - main
 permissions:
   contents: write
 jobs:
