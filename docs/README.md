@@ -163,8 +163,7 @@ managementPorts:
 
 
 ## Support and Communication Channels
-
-(inherited from ODCS)
+The structure describing "support and communication channels" is shared between all Bitol standards.
 
 ### Field Descriptions
 
@@ -182,7 +181,7 @@ managementPorts:
 | support.authoritativeDefinitions | Authoritative Definitions | No       | Authoritative definitions block.                                                                                                  | 
 
 ## Team
-(inherited from ODCS)
+The structure describing "team" is shared between all Bitol standards.
 
 ### Field Descriptions
 
@@ -201,9 +200,9 @@ managementPorts:
 | team.authoritativeDefinitions | Authoritative Definitions          | No       | Authoritative definitions block.                                                           | 
 
 ## Ancillary Objects
-(all inherited from ODCS)
 
 ### Custom Properties
+The structure describing "Custom Properties" is shared between all Bitol standards.
 
 | Key                          | UX label             | Required | Description                                                                                                       |
 |------------------------------|----------------------|----------|-------------------------------------------------------------------------------------------------------------------|
@@ -213,6 +212,7 @@ managementPorts:
 | customProperties.description | Description          | No       | Optional description.                                                                                             |
 
 ### Authoritative Definitions
+The structure describing "Authoritative Definitions" is shared between all Bitol standards.
 
 | Key                                  | UX label          | Required | Description                                                                                                                                                   |
 |--------------------------------------|-------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
