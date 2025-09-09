@@ -4,6 +4,11 @@ description: "Home of Open Data Product Standard (ODPS) documentation."
 image: "https://raw.githubusercontent.com/bitol-io/artwork/main/horizontal/color/Bitol_Logo_color.svg"
 ---
 
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/8149/badge)](https://www.bestpractices.dev/projects/8149)
+<a href="https://github.com/bitol-io/open-data-product-standard">
+<img alt="Stars" src="https://img.shields.io/github/stars/bitol-io/open-data-product-standard" /></a>
+<a href="https://jgp.ai/dmlslack" rel="nofollow"><img src="https://img.shields.io/badge/slack-join_chat-white.svg?logo=slack&amp;style=social" alt="Slack Status" data-canonical-src="https://img.shields.io/badge/slack-join_chat-white.svg?logo=slack&amp;style=social" style="max-width: 100%;"></a>
+
 
 # Open Data Product Standard (ODPS)
 

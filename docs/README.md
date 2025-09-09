@@ -11,7 +11,14 @@ This document describes the keys and values expected in a YAML data product, per
 
 ## Table of content
 
-> TBD
+1. [Fundamentals](#fundamentals)
+1. [Product Information](#product-information)
+1. [Management Ports](#management-ports)
+1. [Support and Communication Channels](#support-and-communication-channels)
+1. [Team](#team)
+1. [Ancillary Objects: Custom Properties](#custom-properties)
+1. [Ancillary Objects: Authoritative Definitions](#authoritative-definitions)
+1. [Other Properties](#other-properties)
 
 ## Fundamentals
 
@@ -193,10 +200,10 @@ managementPorts:
 | team.customProperties         | Custom Properties                  | No       | Custom properties block.                                                                   | 
 | team.authoritativeDefinitions | Authoritative Definitions          | No       | Authoritative definitions block.                                                           | 
 
-### Ancillary Objects
+## Ancillary Objects
 (all inherited from ODCS)
 
-#### Custom Properties
+### Custom Properties
 
 | Key                          | UX label             | Required | Description                                                                                                       |
 |------------------------------|----------------------|----------|-------------------------------------------------------------------------------------------------------------------|
@@ -205,7 +212,7 @@ managementPorts:
 | customProperties.value       | Value                | No       | The value of the key.                                                                                             |
 | customProperties.description | Description          | No       | Optional description.                                                                                             |
 
-#### Authoritative definitions
+### Authoritative Definitions
 
 | Key                                  | UX label          | Required | Description                                                                                                                                                   |
 |--------------------------------------|-------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -214,7 +221,7 @@ managementPorts:
 | authoritativeDefinitions.url         | URL to definition | Yes      | URL to the authority.                                                                                                                                         |
 | authoritativeDefinitions.description | Description       | No       | Optional description.                                                                                                                                         |
 
-### Other Properties Definition
+## Other Properties
 
 | Key              | UX label            | Required | Description                                                             |
 |------------------|---------------------|----------|-------------------------------------------------------------------------|
