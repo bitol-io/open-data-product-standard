@@ -97,7 +97,7 @@ outputPorts: # Promises [Required]
 - name: rawtransactions
   description: "Raw Transactions"
   type: tables
-  version: 2.0.0 [Required]
+  version: 2.0.0 # [Required]
   contractId: c2798941-1b7e-4b03-9e0d-955b1a872b33 # [Required]
   sbom: # The SBOM can/should be at the version level [Optional]
   - type: "external" # default
