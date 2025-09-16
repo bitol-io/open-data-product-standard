@@ -46,26 +46,26 @@ tags: ['customer']
 
 ### Field Descriptions
 
-| Key                                  | UX label                  | Required | Description                                                                                                   | Example                              |
-|--------------------------------------|---------------------------|----------|---------------------------------------------------------------------------------------------------------------|--------------------------------------|
-| apiVersion                           | Standard version          | Yes      | Version of the standard used to build data product. Default value is `v0.9.0`.                                | v0.9.0                               |
-| kind                                 | Kind                      | Yes      | The kind of file this is. Valid value is `DataProduct`.                                                       | DataProduct                          |
-| id                                   | ID                        | Yes      | A unique identifier used to reduce the risk of dataset name collisions, such as a UUID.                       | 064c4630-8aad-4dc0-ba95-0f69940e6b18 |
-| name                                 | Name                      | No       | Name of the data product.                                                                                     |                                      |
-| version                              | Version                   | No       | Current version of the data product. Not required, but highly recommended.                                    | v1.0.0                               |
-| status                               | Status                    | Yes      | Current status of the data product. Valid values are "proposed", "draft", "active", "deprecated", "retired".  |                                      |
-| domain                               | Domain                    | No       | Business domain                                                                                               | Customer                             |
-| tenant                               | Tenant                    | No       | Organization identifier                                                                                       | RetailCorp                           |
-| authoritativeDefinitions             | Authoritative Definitions | No       | List of links to sources that provide more details on the data contract.                                      |                                      |
-| description                          | Description               | No       | Object containing the descriptions.                                                                           |                                      |
-| description.purpose                  | Purpose                   | No       | Intended purpose for the provided data.                                                                       |                                      |
-| description.limitations              | Limitations               | No       | Technical, compliance, and legal limitations for data use.                                                    |                                      |
-| description.usage                    | Usage                     | No       | Recommended usage of the data.                                                                                |                                      |
-| description.authoritativeDefinitions | Authoritative Definitions | No       | See Authoritative Definitions below.                                                                          |                                      |
-| description.customProperties         | Custom Properties         | No       | See Custom Properties below.                                                                                  |                                      |
-| authoritativeDefinitions             | Authoritative Definitions | No       | See Authoritative Definitions below.                                                                          |                                      |
-| customProperties                     | Custom Properties         | No       | See Custom Properties below.                                                                                  |                                      |
-| tags                                 | Tags                      | No       | Tags as a list                                                                                                | ['customer', 'sales']                |
+| Key                                  | Key | UX label                  | Required | Description                                                                                                   | Example                              |
+|--------------------------------------|-----|---------------------------|----------|---------------------------------------------------------------------------------------------------------------|--------------------------------------|
+| apiVersion                           |     | Standard version          | Yes      | Version of the standard used to build data product. Default value is `v0.9.0`.                                | v0.9.0                               |
+| kind                                 |     | Kind                      | Yes      | The kind of file this is. Valid value is `DataProduct`.                                                       | DataProduct                          |
+| **id**                               | Yes | ID                        | Yes      | A unique identifier used to reduce the risk of dataset name collisions, such as a UUID.                       | 064c4630-8aad-4dc0-ba95-0f69940e6b18 |
+| name                                 |     | Name                      | No       | Name of the data product.                                                                                     |                                      |
+| version                              |     | Version                   | No       | Current version of the data product. Not required, but highly recommended.                                    | v1.0.0                               |
+| status                               |     | Status                    | Yes      | Current status of the data product. Valid values are "proposed", "draft", "active", "deprecated", "retired".  |                                      |
+| domain                               |     | Domain                    | No       | Business domain                                                                                               | Customer                             |
+| tenant                               |     | Tenant                    | No       | Organization identifier                                                                                       | RetailCorp                           |
+| authoritativeDefinitions             |     | Authoritative Definitions | No       | List of links to sources that provide more details on the data contract.                                      |                                      |
+| description                          |     | Description               | No       | Object containing the descriptions.                                                                           |                                      |
+| description.purpose                  |     | Purpose                   | No       | Intended purpose for the provided data.                                                                       |                                      |
+| description.limitations              |     | Limitations               | No       | Technical, compliance, and legal limitations for data use.                                                    |                                      |
+| description.usage                    |     | Usage                     | No       | Recommended usage of the data.                                                                                |                                      |
+| description.authoritativeDefinitions |     | Authoritative Definitions | No       | See Authoritative Definitions below.                                                                          |                                      |
+| description.customProperties         |     | Custom Properties         | No       | See Custom Properties below.                                                                                  |                                      |
+| customProperties                     |     | Custom Properties         | No       | See Custom Properties below.                                                                                  |                                      |
+| authoritativeDefinitions             |     | Authoritative Definitions | No       | See Authoritative Definitions below.                                                                          |                                      |
+| tags                                 |     | Tags                      | No       | Tags as a list                                                                                                | ['customer', 'sales']                |
 
 ## Product information
 
@@ -121,16 +121,24 @@ outputPorts: # Promises [Required]
   contractId: ef769969-0cbe-4188-876f-bb00abadaee4
 ```
 
-| Key                             | Key | UX label     | Required | Description                                                                                                                                                                                 |
-|---------------------------------|-----|--------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| inputPorts                      |     | Input Ports  | Yes      | List of objects describing an input port. You need at least one as a data product needs to get data somewhere.                                                                              |
-| inputPorts.**name**             | Yes |              | Yes      |                                                                                                                                                                                             |
-| outputPorts                     |     | Output Ports | Yes      | List of objects describing an output port. You need at least one, as a data product without output is useless.                                                                              |
-| outputPorts.**name**            | Yes |              | Yes      |                                                                                                                                                                                             |
-| outputPorts.version             | Yes |              | Yes      | For each version, a different instance of the output port is listed. The combination of the name and version is the key. A new (major) version would be a new output port, for simplicity.  |
-| outputPorts.contractId          |     |              | No       |                                                                                                                                                                                             |
-| outputPorts.type                |     |              | No       | There can be different types of output ports, each automated and handled differently. Here you can indicate the type.                                                                       |
-| outputPorts.description         |     |              | No       | Human readable short description of the output port.                                                                                                                                        |
+| Key                                  | Key | UX label                  | Required | Description                                                                                                                                                                                |
+|--------------------------------------|-----|---------------------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| inputPorts                           |     | Input Ports               | No       | List of objects describing an input port. You need at least one as a data product needs to get data somewhere.                                                                             |
+| inputPorts.**name**                  | Yes | Name                      | Yes      |                                                                                                                                                                                            |
+| inputPorts.version                   |     | Version                   | No       | For each version, a different instance of the output port is listed. The combination of the name and version is the key. A new (major) version would be a new output port, for simplicity. |
+| inputPorts.contractId                |     | Contract Id               | No       |                                                                                                                                                                                            |
+| inputPorts.customProperties          |     | Custom properties         | No       | Custom properties.                                                                                                                                                                         |
+| inputPorts.authoritativeDefinitions  |     | Authoritative Definitions | No       | Authoritative definitions.                                                                                                                                                                 |
+| inputPorts.tags                      |     | Tags                      | No       | Tags.                                                                                                                                                                                      |
+| outputPorts                          |     | Output Ports              | Yes      | List of objects describing an output port. You need at least one, as a data product without output is useless.                                                                             |
+| outputPorts.**name**                 | Yes | Name                      | Yes      |                                                                                                                                                                                            |
+| outputPorts.version                  |     | Version                   | No       | For each version, a different instance of the output port is listed. The combination of the name and version is the key. A new (major) version would be a new output port, for simplicity. |
+| outputPorts.contractId               |     | Contract Id               | No       |                                                                                                                                                                                            |
+| outputPorts.type                     |     | Type                      | No       | There can be different types of output ports, each automated and handled differently. Here you can indicate the type.                                                                      |
+| outputPorts.description              |     | Description               | No       | Human readable short description of the output port.                                                                                                                                       |
+| outputPorts.customProperties         |     | Custom properties         | No       | Custom properties.                                                                                                                                                                         |
+| outputPorts.authoritativeDefinitions |     | Authoritative Definitions | No       | Authoritative definitions.                                                                                                                                                                 |
+| outputPorts.tags                     |     | Tags                      | No       | Tags.                                                                                                                                                                                      |
 
 
 ## Management Ports
@@ -148,18 +156,18 @@ managementPorts:
 
 ### Field Descriptions
 
-| Field                                      | UX label                  | Required | Description                                                         |
-|--------------------------------------------|---------------------------|----------|---------------------------------------------------------------------|
-| managementPorts                            | Management Interface      | No       |                                                                     |
-| managementPorts.name                       | Name                      | Yes      | Endpoint identifier or unique name                                  |
-| managementPorts.content                    | Content                   | Yes      | Content: can be `discoverability`, `observability`, or `control`.   |
-| managementPorts.type                       |                           | No       | Type: can be `rest` or `topic`. Default is `rest`.                  |
-| managementPorts.url                        | URL                       | No       | URL to access the endpoint.                                         |
-| managementPorts.channel                    | Channel                   | No       | Channel to communicate with the data product.                       |
-| managementPorts.description                | Description               | No       | Purpose and usage                                                   |
-| managementPorts.tags                       | Tags                      | No       | Tags.                                                               | 
-| managementPorts.customProperties           | Custom Properties         | No       | Custom properties block.                                            | 
-| managementPorts.authoritativeDefinitions   | Authoritative Definitions | No       | Authoritative definitions block.                                    | 
+| Field                                    | Key | UX label                  | Required | Description                                                       |
+|------------------------------------------|-----|---------------------------|----------|-------------------------------------------------------------------|
+| managementPorts                          |     | Management Interface      | No       | Object defining a management port.                                |
+| managementPorts.**name**                 | Yes | Name                      | Yes      | Endpoint identifier or unique name.                               |
+| managementPorts.content                  |     | Content                   | Yes      | Content: can be `discoverability`, `observability`, or `control`. |
+| managementPorts.type                     |     | Type                      | No       | Type: can be `rest` or `topic`. Default is `rest`.                |
+| managementPorts.url                      |     | URL                       | No       | URL to access the endpoint.                                       |
+| managementPorts.channel                  |     | Channel                   | No       | Channel to communicate with the data product.                     |
+| managementPorts.description              |     | Description               | No       | Purpose and usage                                                 |
+| managementPorts.customProperties         |     | Custom Properties         | No       | Custom properties block.                                          | 
+| managementPorts.authoritativeDefinitions |     | Authoritative Definitions | No       | Authoritative definitions block.                                  | 
+| managementPorts.tags                     |     | Tags                      | No       | Tags.                                                             | 
 
 
 ## Support and Communication Channels
@@ -167,64 +175,70 @@ The structure describing "support and communication channels" is shared between 
 
 ### Field Descriptions
 
-| Key                              | UX label                  | Required | Description                                                                                                                       |
-|----------------------------------|---------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------|
-| support                          | Support                   | No       | Top level for support channels.                                                                                                   |
-| support.channel                  | Channel                   | Yes      | Channel name or identifier.                                                                                                       |
-| support.url                      | Channel URL               | Yes      | Access URL using normal [URL scheme](https://en.wikipedia.org/wiki/URL#Syntax) (https, mailto, etc.).                             |
-| support.description              | Description               | No       | Description of the channel, free text.                                                                                            |
-| support.tool                     | Tool                      | No       | Name of the tool, value can be `email`, `slack`, `teams`, `discord`, `ticket`, or `other`.                                        |
-| support.scope                    | Scope                     | No       | Scope can be: `interactive`, `announcements`, `issues`.                                                                           |
-| support.invitationUrl            | Invitation URL            | No       | Some tools uses invitation URL for requesting or subscribing. Follows the [URL scheme](https://en.wikipedia.org/wiki/URL#Syntax). |
-| support.tags                     | Tags                      | No       | Tags as a list.                                                                                                                   | 
-| support.customProperties         | Custom Properties         | No       | Custom properties block.                                                                                                          | 
-| support.authoritativeDefinitions | Authoritative Definitions | No       | Authoritative definitions block.                                                                                                  | 
+| Key                              | Key | UX label                  | Required | Description                                                                                                                       |
+|----------------------------------|-----|---------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------|
+| support                          |     | Support                   | No       | Top level for support channels.                                                                                                   |
+| support.channel                  |     | Channel                   | Yes      | Channel name or identifier.                                                                                                       |
+| support.url                      |     | Channel URL               | Yes      | Access URL using normal [URL scheme](https://en.wikipedia.org/wiki/URL#Syntax) (https, mailto, etc.).                             |
+| support.description              |     | Description               | No       | Description of the channel, free text.                                                                                            |
+| support.tool                     |     | Tool                      | No       | Name of the tool, value can be `email`, `slack`, `teams`, `discord`, `ticket`, or `other`.                                        |
+| support.scope                    |     | Scope                     | No       | Scope can be: `interactive`, `announcements`, `issues`.                                                                           |
+| support.invitationUrl            |     | Invitation URL            | No       | Some tools uses invitation URL for requesting or subscribing. Follows the [URL scheme](https://en.wikipedia.org/wiki/URL#Syntax). |
+| support.customProperties         |     | Custom Properties         | No       | Custom properties block.                                                                                                          | 
+| support.authoritativeDefinitions |     | Authoritative Definitions | No       | Authoritative definitions block.                                                                                                  | 
+| support.tags                     |     | Tags                      | No       | Tags as a list.                                                                                                                   | 
 
 ## Team
-The structure describing "team" is shared between all Bitol standards.
+The structure describing "team" is shared between all Bitol standards, matching RFC 0016.
 
 ### Field Descriptions
 
-| Key                           | UX label                           | Required | Description                                                                                |
-|-------------------------------|------------------------------------|----------|--------------------------------------------------------------------------------------------|
-| team                          | Team                               | No       | Object                                                                                     |
-| team.username                 | Username                           | No       | The user's username or email.                                                              |
-| team.name                     | Name                               | No       | The user's name.                                                                           |
-| team.description              | Description                        | No       | The user's name.                                                                           |
-| team.role                     | Role                               | No       | The user's job role; Examples might be owner, data steward. There is no limit on the role. |
-| team.dateIn                   | Date In                            | No       | The date when the user joined the team.                                                    |
-| team.dateOut                  | Date Out                           | No       | The date when the user ceased to be part of the team.                                      |
-| team.replacedByUsername       | Replaced By Username               | No       | The username of the user who replaced the previous user.                                   |
-| team.tags                     | Tags                               | No       | Tags as a list.                                                                            | 
-| team.customProperties         | Custom Properties                  | No       | Custom properties block.                                                                   | 
-| team.authoritativeDefinitions | Authoritative Definitions          | No       | Authoritative definitions block.                                                           | 
+| Key                                   | Key | UX label                  | Required | Description                                                                                |
+|---------------------------------------|-----|---------------------------|----------|--------------------------------------------------------------------------------------------|
+| team                                  |     | Team                      | No       | Object representing a team.                                                                |
+| team.name                             |     | Name                      | No       | Team name.                                                                                 |    
+| team.description                      |     | Description               | No       | Team description.                                                                          |
+| team.customProperties                 |     | Custom Properties         | No       | Custom properties block.                                                                   | 
+| team.authoritativeDefinitions         |     | Authoritative Definitions | No       | Authoritative definitions block.                                                           | 
+| team.tags                             |     | Tags                      | No       | Tags as a list.                                                                            | 
+| team.members                          |     | Team Members              | No       | List of members                                                                            |
+| team.members.**username**             | Yes | Username                  | Yes      | The user's username or email.                                                              |
+| team.members.name                     |     | Name                      | No       | The user's name.                                                                           |
+| team.members.description              |     | Description               | No       | The user's name.                                                                           |
+| team.members.role                     |     | Role                      | No       | The user's job role; Examples might be owner, data steward. There is no limit on the role. |
+| team.members.dateIn                   |     | Date In                   | No       | The date when the user joined the team.                                                    |
+| team.members.dateOut                  |     | Date Out                  | No       | The date when the user ceased to be part of the team.                                      |
+| team.members.replacedByUsername       |     | Replaced By Username      | No       | The username of the user who replaced the previous user.                                   |
+| team.members.customProperties         |     | Custom Properties         | No       | Custom properties block.                                                                   | 
+| team.members.authoritativeDefinitions |     | Authoritative Definitions | No       | Authoritative definitions block.                                                           | 
+| team.members.tags                     |     | Tags                      | No       | Tags as a list.                                                                            | 
 
 ## Ancillary Objects
 
 ### Custom Properties
 The structure describing "Custom Properties" is shared between all Bitol standards.
 
-| Key                          | UX label             | Required | Description                                                                                                       |
-|------------------------------|----------------------|----------|-------------------------------------------------------------------------------------------------------------------|
-| customProperties             | Custom Properties    | No       | A list of key/value pairs for custom properties.                                                                  |
-| customProperties.property    | Property             | No       | The name of the key. Names should be in camel case–the same as if they were permanent properties in the contract. |
-| customProperties.value       | Value                | No       | The value of the key.                                                                                             |
-| customProperties.description | Description          | No       | Optional description.                                                                                             |
+| Key                           | Key | UX label             | Required | Description                                                                                                       |
+|-------------------------------|-----|----------------------|----------|-------------------------------------------------------------------------------------------------------------------|
+| customProperties              |     | Custom Properties    | No       | A list of key/value pairs for custom properties.                                                                  |
+| customProperties.**property** | Yes | Property             | No       | The name of the key. Names should be in camel case–the same as if they were permanent properties in the contract. |
+| customProperties.value        |     | Value                | No       | The value of the key.                                                                                             |
+| customProperties.description  |     | Description          | No       | Optional description.                                                                                             |
 
 ### Authoritative Definitions
 The structure describing "Authoritative Definitions" is shared between all Bitol standards.
 
-| Key                                  | UX label          | Required | Description                                                                                                                                                   |
-|--------------------------------------|-------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| authoritativeDefinitions             | Link              | No       | A list of type/link pairs for authoritative definitions.                                                                                                      |
-| authoritativeDefinitions.type        | Definition type   | Yes      | Type of definition for authority.  Valid values are: `businessDefinition`, `transformationImplementation`, `videoTutorial`, `tutorial`, and `implementation`. |
-| authoritativeDefinitions.url         | URL to definition | Yes      | URL to the authority.                                                                                                                                         |
-| authoritativeDefinitions.description | Description       | No       | Optional description.                                                                                                                                         |
+| Key                                  | Key | UX label          | Required | Description                                                                                                                                                                                                                                                                    |
+|--------------------------------------|-----|-------------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| authoritativeDefinitions             |     | Link              | No       | A list of type/link pairs for authoritative definitions.                                                                                                                                                                                                                       |
+| authoritativeDefinitions.**type**    | Yes | Definition type   | Yes      | Type of definition for authority. Recommended values are: `businessDefinition`, `transformationImplementation`, `videoTutorial`, `tutorial`, and `implementation`. At the root level, a type can also be `canonicalUrl` to indicate a reference to the product's last version. |
+| authoritativeDefinitions.url         |     | URL to definition | Yes      | URL to the authority.                                                                                                                                                                                                                                                          |
+| authoritativeDefinitions.description |     | Description       | No       | Optional description.                                                                                                                                                                                                                                                          |
 
 ## Other Properties
 
-| Key              | UX label            | Required | Description                                                             |
-|------------------|---------------------|----------|-------------------------------------------------------------------------|
-| productCreatedTs | Product Created UTC | No       | Timestamp in UTC of when the data contract was created, using ISO 8601. |
+| Key              | Key | UX label            | Required | Description                                                             |
+|------------------|-----|---------------------|----------|-------------------------------------------------------------------------|
+| productCreatedTs |     | Product Created UTC | No       | Timestamp in UTC of when the data contract was created, using ISO 8601. |
 
 All trademarks are the property of their respective owners. 
