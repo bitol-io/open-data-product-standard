@@ -1,1 +1,9 @@
 /.idea/
+.cache
+
+docs/changelog.md
+docs/contributing.md
+docs/home.md
+docs/examples/*.md
+
+site

@@ -20,9 +20,7 @@ Thanks for your interest and for taking the time to come here! ❤️
 This standard describes a structure for a **data product** called Open Data Product Standard (ODPS). Its current version is v0.9.0. It is available for you as an Apache 2.0 license. Contributions are welcome!
 
 ## Discover the open standard
-A reader-friendly version of the standard can be found on its [dedicated site](https://bitol-io.github.io/open-data-contract-standard/).
-
-Discover the [Open Data Contract Standard](docs/README.md). This file contains some explanations and several examples. More [examples](docs/examples/README.md) can be found here.
+A reader-friendly version of the standard can be found on its [dedicated site](https://bitol-io.github.io/open-data-product-standard/).
 
 Contributions are welcome!
 

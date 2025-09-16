@@ -1,6 +1,6 @@
 ---
-title: "Contributing: Open Data Contract Standard (ODCS)"
-description: "How you can contribute to the Open Data Contract Standard (ODCS)."
+title: "Contributing: Open Data Product Standard (ODPS)"
+description: "How you can contribute to the Open Data Product Standard (ODPS)."
 image: "https://raw.githubusercontent.com/bitol-io/artwork/main/horizontal/color/Bitol_Logo_color.svg"
 ---
 

@@ -1,0 +1,29 @@
+{
+  "name": "open-data-product-standard",
+  "version": "0.9.0",
+  "description": "Open Data Product Standard (ODPS) - A standard for defining data products",
+  "main": "schema/odps-json-schema-v0.9.0.json",
+  "scripts": {
+    "validate": "./scripts/validate-examples.sh",
+    "test": "./scripts/validate-examples.sh"
+  },
+  "keywords": [
+    "data-product",
+    "json-schema",
+    "validation",
+    "odps",
+    "open-data"
+  ],
+  "author": "Bitol.io",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitol-io/open-data-product-standard.git"
+  },
+  "devDependencies": {
+    "ajv-cli": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 
