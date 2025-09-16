@@ -189,7 +189,7 @@ The structure describing "support and communication channels" is shared between 
 | support.tags                     |     | Tags                      | No       | Tags as a list.                                                                                                                   | 
 
 ## Team
-The structure describing "team" is shared between all Bitol standards.
+The structure describing "team" is shared between all Bitol standards, matching RFC 0016.
 
 ### Field Descriptions
 
