@@ -8,7 +8,7 @@ This document tracks the history and evolution of the **Open Data Product Standa
 
 # v1.0.0 - 2025-09-16 - TENTATIVE
 
-* Add `CustomProperties` for `outputPorts`, `inputPorts` (top level).
+* Add `customProperties` for `outputPorts`, `inputPorts` (top level).
 * Team structure aligned on ODCS v3.1.0.
 * Add keys in documentation where it makes sense.
 
