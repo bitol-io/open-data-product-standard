@@ -92,11 +92,7 @@
       }
     },
     "team": {
-      "type": "array",
-      "description": "Team members associated with the data product.",
-      "items": {
-        "$ref": "#/$defs/TeamMember"
-      }
+      "$ref": "#/$defs/Team"
     },
     "productCreatedTs": {
       "type": "string",
@@ -173,7 +169,7 @@
         "type": {
           "type": "string",
           "description": "Type of definition for authority.",
-          "enum": ["businessDefinition", "transformationImplementation", "videoTutorial", "tutorial", "implementation"]
+          "examples": ["businessDefinition", "transformationImplementation", "videoTutorial", "tutorial", "implementation"]
         },
         "url": {
           "type": "string",
@@ -203,6 +199,23 @@
         "contractId": {
           "type": "string",
           "description": "Contract ID for the input port."
+        },
+        "tags": {
+          "$ref": "#/$defs/Tags"
+        },
+        "customProperties": {
+          "type": "array",
+          "description": "Custom properties block.",
+          "items": {
+            "$ref": "#/$defs/CustomProperty"
+          }
+        },
+        "authoritativeDefinitions": {
+          "type": "array",
+          "description": "Authoritative definitions block.",
+          "items": {
+            "$ref": "#/$defs/AuthoritativeDefinition"
+          }
         }
       },
       "required": ["name", "version", "contractId"]
@@ -244,6 +257,23 @@
           "description": "Dependencies or input contracts.",
           "items": {
             "$ref": "#/$defs/InputContract"
+          }
+        },
+        "tags": {
+          "$ref": "#/$defs/Tags"
+        },
+        "customProperties": {
+          "type": "array",
+          "description": "Custom properties block.",
+          "items": {
+            "$ref": "#/$defs/CustomProperty"
+          }
+        },
+        "authoritativeDefinitions": {
+          "type": "array",
+          "description": "Authoritative definitions block.",
+          "items": {
+            "$ref": "#/$defs/AuthoritativeDefinition"
           }
         }
       },
@@ -423,6 +453,46 @@
         "replacedByUsername": {
           "type": "string",
           "description": "The username of the user who replaced the previous user."
+        },
+        "tags": {
+          "$ref": "#/$defs/Tags"
+        },
+        "customProperties": {
+          "type": "array",
+          "description": "Custom properties block.",
+          "items": {
+            "$ref": "#/$defs/CustomProperty"
+          }
+        },
+        "authoritativeDefinitions": {
+          "type": "array",
+          "description": "Authoritative definitions block.",
+          "items": {
+            "$ref": "#/$defs/AuthoritativeDefinition"
+          }
+        }
+      },
+      "required": ["username"]
+    },
+    "Team": {
+      "type": "object",
+      "description": "Team information.",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Team name."
+        },
+        "description": {
+          "type": "string",
+          "description": "Team description."
+        },
+        "members": {
+          "type": "array",
+          "description": "List of members.",
+          "items": {
+            "$ref": "#/$defs/TeamMember"
+          }
         },
         "tags": {
           "$ref": "#/$defs/Tags"

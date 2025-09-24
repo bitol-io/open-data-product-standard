@@ -27,6 +27,13 @@ inputPorts:
 - name: onlinetransactions
   version: 1.1.0
   contractId: ec2a112d-5cfe-49f3-8760-f9cfb4597547
+  tags: ["transactions"]
+  customProperties:
+    - property: "transactions_version"
+      value: "1.1.0"
+  authoritativeDefinitions:
+    - type: "data_dictionary"
+      url: "https://mydata/dictionary"
 
 outputPorts:
 - name: rawtransactions
@@ -39,6 +46,13 @@ outputPorts:
   type: tables
   version: 2.0.0
   contractId: c2798941-1b7e-4b03-9e0d-955b1a872b33
+  tags: ["transactions"]
+  customProperties:
+    - property: "transactions_version"
+      value: "2.0.0"
+  authoritativeDefinitions:
+    - type: "data_dictionary"
+      url: "https://mydata/dictionary"
   sbom:
   - type: "external"
     url: "https://mysbomserver/mysbom"
@@ -53,7 +67,7 @@ outputPorts:
   type: tables
   version: 1.0.0
   contractId: a44978be-1fe0-4226-b840-1b715bc25c63
-    
+
 - name: fulltransactionswithreturns 
   description: "Full transactions with returns"
   type: tables
@@ -65,6 +79,13 @@ managementPorts:
   type: topic
   name: tpc-dict-update
   description: Kafka topic for dictionary updates
+  tags: ["kafka"]
+  customProperties:
+    - property: "kafka_topic"
+      value: "true"
+  authoritativeDefinitions:
+    - type: "kafka_topic"
+      url: "https://mykafka/topic"
 
 support:
 - channel: "Data Team Slack"
@@ -79,15 +100,22 @@ support:
   scope: "issues"
 
 team:
-- username: "john.doe@retailcorp.com"
-  name: "John Doe"
-  description: "Data Product Owner"
-  role: "owner"
-  dateIn: "2023-01-15"
-- username: "jane.smith@retailcorp.com"
-  name: "Jane Smith"
-  description: "Data Steward"
-  role: "data steward"
-  dateIn: "2023-02-01"
+  name: "Data Team"
+  description: "The Data Team is responsible for the data product."
+  tags: ["data", "team"]
+  customProperties:
+    - property: "data_team"
+      value: "true"
+  members:
+  - username: "john.doe@retailcorp.com"
+    name: "John Doe"
+    description: "Data Product Owner"
+    role: "owner"
+    dateIn: "2023-01-15"
+  - username: "jane.smith@retailcorp.com"
+    name: "Jane Smith"
+    description: "Data Steward"
+    role: "data steward"
+    dateIn: "2023-02-01"
 
 productCreatedTs: "2023-01-15T10:30:00Z" 

@@ -8,8 +8,9 @@ This document tracks the history and evolution of the **Open Data Product Standa
 
 # v1.0.0 - 2025-09-16 - TENTATIVE
 
-* Add `customProperties` for `outputPorts`, `inputPorts` (top level).
+* Add `customProperties`, `tags` and `authoritativeDefinitions` for `outputPorts`, `inputPorts` (top level).
 * Team structure aligned on ODCS v3.1.0.
+* AuthoritativeDefinitions `type` changed from enum to examples, aligned with ODCS v3.1.0.
 * Add keys in documentation where it makes sense.
 
 # v0.9.0 - 2025-07-15 - APPROVED
