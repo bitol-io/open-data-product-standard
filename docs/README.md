@@ -27,7 +27,7 @@ The core metadata section defines the fundamental identifying information requir
 ### Example
 
 ```yaml
-apiVersion: v0.9.0
+apiVersion: v1.0.0
 kind: DataProduct
 
 name: Customer Data Product
@@ -48,7 +48,7 @@ tags: ['customer']
 
 | Key                                  | Key | UX label                  | Required | Description                                                                                                   | Example                              |
 |--------------------------------------|-----|---------------------------|----------|---------------------------------------------------------------------------------------------------------------|--------------------------------------|
-| apiVersion                           |     | Standard version          | Yes      | Version of the standard used to build data product. Default value is `v0.9.0`.                                | v0.9.0                               |
+| apiVersion                           |     | Standard version          | Yes      | Version of the standard used to build data product. Default value is `v1.0.0`.                                | v1.0.0                               |
 | kind                                 |     | Kind                      | Yes      | The kind of file this is. Valid value is `DataProduct`.                                                       | DataProduct                          |
 | **id**                               | Yes | ID                        | Yes      | A unique identifier used to reduce the risk of dataset name collisions, such as a UUID.                       | 064c4630-8aad-4dc0-ba95-0f69940e6b18 |
 | name                                 |     | Name                      | No       | Name of the data product.                                                                                     |                                      |
