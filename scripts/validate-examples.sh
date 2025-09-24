@@ -8,7 +8,7 @@ NC='\033[0m'
 
 script_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 project_root=$(dirname "$script_dir")
-json_schema_version=${JSON_SCHEMA_VERSION:-v0.9.0}
+json_schema_version=${JSON_SCHEMA_VERSION:-v1.0.0}
 num_failed_validation=0
 
 echo -e "${YELLOW}Open Data Product Standard (ODPS) Validation Script${NC}"
