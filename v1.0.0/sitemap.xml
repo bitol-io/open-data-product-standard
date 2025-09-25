@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://bitol-io.github.io/open-data-product-standard/v1.0.0/</loc>
+         <lastmod>2025-09-25</lastmod>
+    </url>
+    <url>
+         <loc>https://bitol-io.github.io/open-data-product-standard/v1.0.0/changelog/</loc>
+         <lastmod>2025-09-25</lastmod>
+    </url>
+    <url>
+         <loc>https://bitol-io.github.io/open-data-product-standard/v1.0.0/contributing/</loc>
+         <lastmod>2025-09-25</lastmod>
+    </url>
+    <url>
+         <loc>https://bitol-io.github.io/open-data-product-standard/v1.0.0/home/</loc>
+         <lastmod>2025-09-25</lastmod>
+    </url>
+    <url>
+         <loc>https://bitol-io.github.io/open-data-product-standard/v1.0.0/examples/customer-data-product/</loc>
+         <lastmod>2025-09-25</lastmod>
+    </url>
+    <url>
+         <loc>https://bitol-io.github.io/open-data-product-standard/v1.0.0/examples/simple-data-product/</loc>
+         <lastmod>2025-09-25</lastmod>
+    </url>
+</urlset>

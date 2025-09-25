@@ -1,0 +1,1853 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Details of the Open Data Product Standard (ODPS). Includes fundamentals, datasets, schemas, data quality, pricing, stakeholders, roles, service-level agreements and other properties.">
+      
+      
+      
+        <link rel="canonical" href="https://bitol-io.github.io/open-data-product-standard/v1.0.0/">
+      
+      
+        <link rel="prev" href="home/">
+      
+      
+        <link rel="next" href="examples/customer-data-product/">
+      
+      
+      <link rel="icon" href="img/Bitol_Logo_icon_color.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Definition: Open Data Product Standard (ODPS) - Open Data Product Standard</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Open Data Product Standard" >
+      
+        <meta  property="og:description"  content="Details of the Open Data Product Standard (ODPS). Includes fundamentals, datasets, schemas, data quality, pricing, stakeholders, roles, service-level agreements and other properties." >
+      
+        <meta  property="og:image"  content="https://bitol-io.github.io/open-data-product-standard/v1.0.0/assets/images/social/README.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://bitol-io.github.io/open-data-product-standard/v1.0.0/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Open Data Product Standard" >
+      
+        <meta  name="twitter:description"  content="Details of the Open Data Product Standard (ODPS). Includes fundamentals, datasets, schemas, data quality, pricing, stakeholders, roles, service-level agreements and other properties." >
+      
+        <meta  name="twitter:image"  content="https://bitol-io.github.io/open-data-product-standard/v1.0.0/assets/images/social/README.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#open-data-product-standard" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Open Data Product Standard" class="md-header__button md-logo" aria-label="Open Data Product Standard" data-md-component="logo">
+      
+  <img src="img/Bitol_Logo_icon_color.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Open Data Product Standard
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Definition: Open Data Product Standard (ODPS)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/bitol-io/open-data-product-standard" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    open-data-product-standard
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="home/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Standard
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="examples/README.md" class="md-tabs__link">
+          
+  
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="changelog/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Changelog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="contributing/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Contributing
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Open Data Product Standard" class="md-nav__button md-logo" aria-label="Open Data Product Standard" data-md-component="logo">
+      
+  <img src="img/Bitol_Logo_icon_color.svg" alt="logo">
+
+    </a>
+    Open Data Product Standard
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/bitol-io/open-data-product-standard" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    open-data-product-standard
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Standard
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Standard
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executive Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of content
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamentals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field Descriptions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Product information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#management-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Management Ports
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Management Ports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-descriptions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field Descriptions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-and-communication-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support and Communication Channels
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Support and Communication Channels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#field-descriptions_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field Descriptions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Team">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#field-descriptions_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field Descriptions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ancillary-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ancillary Objects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ancillary Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authoritative-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authoritative Definitions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Properties
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="examples/README.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="examples/customer-data-product/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Customer Data Product
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="examples/simple-data-product/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Simple Data Product
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="open-data-product-standard">Open Data Product Standard</h1>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>This document describes the keys and values expected in a YAML data product, per the <strong>Open Data Product Standard</strong> (ODPS). The Open Data Product Standard YAML file serves as the primary configuration and documentation for data products within your organization. This document explains each section of the standard, its purpose, and how to properly write it.</p>
+<h2 id="table-of-content">Table of content</h2>
+<ol>
+<li><a href="#fundamentals">Fundamentals</a></li>
+<li><a href="#product-information">Product Information</a></li>
+<li><a href="#management-ports">Management Ports</a></li>
+<li><a href="#support-and-communication-channels">Support and Communication Channels</a></li>
+<li><a href="#team">Team</a></li>
+<li><a href="#custom-properties">Ancillary Objects: Custom Properties</a></li>
+<li><a href="#authoritative-definitions">Ancillary Objects: Authoritative Definitions</a></li>
+<li><a href="#other-properties">Other Properties</a></li>
+</ol>
+<h2 id="fundamentals">Fundamentals</h2>
+<p>The core metadata section defines the fundamental identifying information required for the data product.</p>
+<h3 id="example">Example</h3>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.0.0</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DataProduct</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Customer Data Product</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fbe8d147-28db-4f1d-bedf-a3fe9f458427</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seller</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">draft</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nt">tenant</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RetailCorp</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nt">description</span><span class="p">:</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nt">purpose</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Enterprise view of a customer.</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nt">limitations</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">No known limitations.</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="nt">usage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Check the various artefacts for their own description.</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;customer&#39;</span><span class="p p-Indicator">]</span>
+</span></code></pre></div>
+<h3 id="field-descriptions">Field Descriptions</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Key</th>
+<th>UX label</th>
+<th>Required</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>apiVersion</td>
+<td></td>
+<td>Standard version</td>
+<td>Yes</td>
+<td>Version of the standard used to build data product. Default value is <code>v1.0.0</code>.</td>
+<td>v1.0.0</td>
+</tr>
+<tr>
+<td>kind</td>
+<td></td>
+<td>Kind</td>
+<td>Yes</td>
+<td>The kind of file this is. Valid value is <code>DataProduct</code>.</td>
+<td>DataProduct</td>
+</tr>
+<tr>
+<td><strong>id</strong></td>
+<td>Yes</td>
+<td>ID</td>
+<td>Yes</td>
+<td>A unique identifier used to reduce the risk of dataset name collisions, such as a UUID.</td>
+<td>064c4630-8aad-4dc0-ba95-0f69940e6b18</td>
+</tr>
+<tr>
+<td>name</td>
+<td></td>
+<td>Name</td>
+<td>No</td>
+<td>Name of the data product.</td>
+<td></td>
+</tr>
+<tr>
+<td>version</td>
+<td></td>
+<td>Version</td>
+<td>No</td>
+<td>Current version of the data product. Not required, but highly recommended.</td>
+<td>v1.0.0</td>
+</tr>
+<tr>
+<td>status</td>
+<td></td>
+<td>Status</td>
+<td>Yes</td>
+<td>Current status of the data product. Valid values are "proposed", "draft", "active", "deprecated", "retired".</td>
+<td></td>
+</tr>
+<tr>
+<td>domain</td>
+<td></td>
+<td>Domain</td>
+<td>No</td>
+<td>Business domain</td>
+<td>Customer</td>
+</tr>
+<tr>
+<td>tenant</td>
+<td></td>
+<td>Tenant</td>
+<td>No</td>
+<td>Organization identifier</td>
+<td>RetailCorp</td>
+</tr>
+<tr>
+<td>authoritativeDefinitions</td>
+<td></td>
+<td>Authoritative Definitions</td>
+<td>No</td>
+<td>List of links to sources that provide more details on the data contract.</td>
+<td></td>
+</tr>
+<tr>
+<td>description</td>
+<td></td>
+<td>Description</td>
+<td>No</td>
+<td>Object containing the descriptions.</td>
+<td></td>
+</tr>
+<tr>
+<td>description.purpose</td>
+<td></td>
+<td>Purpose</td>
+<td>No</td>
+<td>Intended purpose for the provided data.</td>
+<td></td>
+</tr>
+<tr>
+<td>description.limitations</td>
+<td></td>
+<td>Limitations</td>
+<td>No</td>
+<td>Technical, compliance, and legal limitations for data use.</td>
+<td></td>
+</tr>
+<tr>
+<td>description.usage</td>
+<td></td>
+<td>Usage</td>
+<td>No</td>
+<td>Recommended usage of the data.</td>
+<td></td>
+</tr>
+<tr>
+<td>description.authoritativeDefinitions</td>
+<td></td>
+<td>Authoritative Definitions</td>
+<td>No</td>
+<td>See Authoritative Definitions below.</td>
+<td></td>
+</tr>
+<tr>
+<td>description.customProperties</td>
+<td></td>
+<td>Custom Properties</td>
+<td>No</td>
+<td>See Custom Properties below.</td>
+<td></td>
+</tr>
+<tr>
+<td>customProperties</td>
+<td></td>
+<td>Custom Properties</td>
+<td>No</td>
+<td>See Custom Properties below.</td>
+<td></td>
+</tr>
+<tr>
+<td>authoritativeDefinitions</td>
+<td></td>
+<td>Authoritative Definitions</td>
+<td>No</td>
+<td>See Authoritative Definitions below.</td>
+<td></td>
+</tr>
+<tr>
+<td>tags</td>
+<td></td>
+<td>Tags</td>
+<td>No</td>
+<td>Tags as a list</td>
+<td>['customer', 'sales']</td>
+</tr>
+</tbody>
+</table>
+<h2 id="product-information">Product information</h2>
+<p>Describe the core of the product.</p>
+<h3 id="example_1">Example</h3>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">inputPorts</span><span class="p">:</span><span class="w"> </span><span class="c1"># Expectations [Optional]</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">payments</span><span class="w"> </span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0.0</span><span class="w"> </span><span class="c1"># [Required]</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">contractId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dbb7b1eb-7628-436e-8914-2a00638ba6db</span><span class="w"> </span><span class="c1"># [Required]</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">payments</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0.0</span><span class="w"> </span><span class="c1"># [Required]</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">contractId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dbb7b1eb-7628-436e-8914-2a00638ba6da</span><span class="w"> </span><span class="c1"># [Required]</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">onlinetransactions</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0.0</span><span class="w"> </span><span class="c1"># [Required]</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="nt">contractId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ec2a112d-5cfe-49f3-8760-f9cfb4597544</span><span class="w"> </span><span class="c1"># [Required]</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">onlinetransactions</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.1.0</span><span class="w"> </span><span class="c1"># [Required]</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span><span class="nt">contractId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ec2a112d-5cfe-49f3-8760-f9cfb4597547</span><span class="w"> </span><span class="c1"># [Required]</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="nt">outputPorts</span><span class="p">:</span><span class="w"> </span><span class="c1"># Promises [Required]</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rawtransactions</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Raw</span><span class="nv"> </span><span class="s">Transactions&quot;</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tables</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0.0</span><span class="w"> </span><span class="c1"># [Required]</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">  </span><span class="nt">contractId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c2798941-1b7e-4b03-9e0d-955b1a872b32</span><span class="w"> </span><span class="c1"># [Required]</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rawtransactions</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Raw</span><span class="nv"> </span><span class="s">Transactions&quot;</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tables</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0.0</span><span class="w"> </span><span class="c1"># [Required]</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">  </span><span class="nt">contractId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">c2798941-1b7e-4b03-9e0d-955b1a872b33</span><span class="w"> </span><span class="c1"># [Required]</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">  </span><span class="nt">sbom</span><span class="p">:</span><span class="w"> </span><span class="c1"># The SBOM can/should be at the version level [Optional]</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;external&quot;</span><span class="w"> </span><span class="c1"># default</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://mysbomserver/mysbom&quot;</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">  </span><span class="nt">inputContracts</span><span class="p">:</span><span class="w"> </span><span class="c1"># or dependencies [Optional]</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dbb7b1eb-7628-436e-8914-2a00638ba6db</span><span class="w"> </span><span class="c1"># or contractId</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0.0</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ec2a112d-5cfe-49f3-8760-f9cfb4597544</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0.0</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consolidatedtransactions</span><span class="w"> </span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Consolidated</span><span class="nv"> </span><span class="s">transactions&quot;</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tables</span>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0.0</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">  </span><span class="nt">contractId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">a44978be-1fe0-4226-b840-1b715bc25c63</span>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fulltransactionswithreturns</span><span class="w"> </span>
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Full</span><span class="nv"> </span><span class="s">transactions</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">returns&quot;</span>
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tables</span>
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.3.0</span>
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">  </span><span class="nt">contractId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ef769969-0cbe-4188-876f-bb00abadaee4</span>
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Key</th>
+<th>UX label</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>inputPorts</td>
+<td></td>
+<td>Input Ports</td>
+<td>No</td>
+<td>List of objects describing an input port. You need at least one as a data product needs to get data somewhere.</td>
+</tr>
+<tr>
+<td>inputPorts.<strong>name</strong></td>
+<td>Yes</td>
+<td>Name</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>inputPorts.version</td>
+<td></td>
+<td>Version</td>
+<td>No</td>
+<td>For each version, a different instance of the output port is listed. The combination of the name and version is the key. A new (major) version would be a new output port, for simplicity.</td>
+</tr>
+<tr>
+<td>inputPorts.contractId</td>
+<td></td>
+<td>Contract Id</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>inputPorts.customProperties</td>
+<td></td>
+<td>Custom properties</td>
+<td>No</td>
+<td>Custom properties.</td>
+</tr>
+<tr>
+<td>inputPorts.authoritativeDefinitions</td>
+<td></td>
+<td>Authoritative Definitions</td>
+<td>No</td>
+<td>Authoritative definitions.</td>
+</tr>
+<tr>
+<td>inputPorts.tags</td>
+<td></td>
+<td>Tags</td>
+<td>No</td>
+<td>Tags.</td>
+</tr>
+<tr>
+<td>outputPorts</td>
+<td></td>
+<td>Output Ports</td>
+<td>Yes</td>
+<td>List of objects describing an output port. You need at least one, as a data product without output is useless.</td>
+</tr>
+<tr>
+<td>outputPorts.<strong>name</strong></td>
+<td>Yes</td>
+<td>Name</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>outputPorts.version</td>
+<td></td>
+<td>Version</td>
+<td>No</td>
+<td>For each version, a different instance of the output port is listed. The combination of the name and version is the key. A new (major) version would be a new output port, for simplicity.</td>
+</tr>
+<tr>
+<td>outputPorts.contractId</td>
+<td></td>
+<td>Contract Id</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>outputPorts.type</td>
+<td></td>
+<td>Type</td>
+<td>No</td>
+<td>There can be different types of output ports, each automated and handled differently. Here you can indicate the type.</td>
+</tr>
+<tr>
+<td>outputPorts.description</td>
+<td></td>
+<td>Description</td>
+<td>No</td>
+<td>Human readable short description of the output port.</td>
+</tr>
+<tr>
+<td>outputPorts.customProperties</td>
+<td></td>
+<td>Custom properties</td>
+<td>No</td>
+<td>Custom properties.</td>
+</tr>
+<tr>
+<td>outputPorts.authoritativeDefinitions</td>
+<td></td>
+<td>Authoritative Definitions</td>
+<td>No</td>
+<td>Authoritative definitions.</td>
+</tr>
+<tr>
+<td>outputPorts.tags</td>
+<td></td>
+<td>Tags</td>
+<td>No</td>
+<td>Tags.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="management-ports">Management Ports</h2>
+<p>The management ports define access points for managing the data product.</p>
+<h3 id="example_2">Example</h3>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">managementPorts</span><span class="p">:</span><span class="w"> </span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">content</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dictionary</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">topic</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tpc-dict-update</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Kafka topic for dictionary updates</span>
+</span></code></pre></div>
+<h3 id="field-descriptions_1">Field Descriptions</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Key</th>
+<th>UX label</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>managementPorts</td>
+<td></td>
+<td>Management Interface</td>
+<td>No</td>
+<td>Object defining a management port.</td>
+</tr>
+<tr>
+<td>managementPorts.<strong>name</strong></td>
+<td>Yes</td>
+<td>Name</td>
+<td>Yes</td>
+<td>Endpoint identifier or unique name.</td>
+</tr>
+<tr>
+<td>managementPorts.content</td>
+<td></td>
+<td>Content</td>
+<td>Yes</td>
+<td>Content: can be <code>discoverability</code>, <code>observability</code>, or <code>control</code>.</td>
+</tr>
+<tr>
+<td>managementPorts.type</td>
+<td></td>
+<td>Type</td>
+<td>No</td>
+<td>Type: can be <code>rest</code> or <code>topic</code>. Default is <code>rest</code>.</td>
+</tr>
+<tr>
+<td>managementPorts.url</td>
+<td></td>
+<td>URL</td>
+<td>No</td>
+<td>URL to access the endpoint.</td>
+</tr>
+<tr>
+<td>managementPorts.channel</td>
+<td></td>
+<td>Channel</td>
+<td>No</td>
+<td>Channel to communicate with the data product.</td>
+</tr>
+<tr>
+<td>managementPorts.description</td>
+<td></td>
+<td>Description</td>
+<td>No</td>
+<td>Purpose and usage</td>
+</tr>
+<tr>
+<td>managementPorts.customProperties</td>
+<td></td>
+<td>Custom Properties</td>
+<td>No</td>
+<td>Custom properties block.</td>
+</tr>
+<tr>
+<td>managementPorts.authoritativeDefinitions</td>
+<td></td>
+<td>Authoritative Definitions</td>
+<td>No</td>
+<td>Authoritative definitions block.</td>
+</tr>
+<tr>
+<td>managementPorts.tags</td>
+<td></td>
+<td>Tags</td>
+<td>No</td>
+<td>Tags.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="support-and-communication-channels">Support and Communication Channels</h2>
+<p>The structure describing "support and communication channels" is shared between all Bitol standards.</p>
+<h3 id="field-descriptions_2">Field Descriptions</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Key</th>
+<th>UX label</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>support</td>
+<td></td>
+<td>Support</td>
+<td>No</td>
+<td>Top level for support channels.</td>
+</tr>
+<tr>
+<td>support.channel</td>
+<td></td>
+<td>Channel</td>
+<td>Yes</td>
+<td>Channel name or identifier.</td>
+</tr>
+<tr>
+<td>support.url</td>
+<td></td>
+<td>Channel URL</td>
+<td>Yes</td>
+<td>Access URL using normal <a href="https://en.wikipedia.org/wiki/URL#Syntax">URL scheme</a> (https, mailto, etc.).</td>
+</tr>
+<tr>
+<td>support.description</td>
+<td></td>
+<td>Description</td>
+<td>No</td>
+<td>Description of the channel, free text.</td>
+</tr>
+<tr>
+<td>support.tool</td>
+<td></td>
+<td>Tool</td>
+<td>No</td>
+<td>Name of the tool, value can be <code>email</code>, <code>slack</code>, <code>teams</code>, <code>discord</code>, <code>ticket</code>, or <code>other</code>.</td>
+</tr>
+<tr>
+<td>support.scope</td>
+<td></td>
+<td>Scope</td>
+<td>No</td>
+<td>Scope can be: <code>interactive</code>, <code>announcements</code>, <code>issues</code>.</td>
+</tr>
+<tr>
+<td>support.invitationUrl</td>
+<td></td>
+<td>Invitation URL</td>
+<td>No</td>
+<td>Some tools uses invitation URL for requesting or subscribing. Follows the <a href="https://en.wikipedia.org/wiki/URL#Syntax">URL scheme</a>.</td>
+</tr>
+<tr>
+<td>support.customProperties</td>
+<td></td>
+<td>Custom Properties</td>
+<td>No</td>
+<td>Custom properties block.</td>
+</tr>
+<tr>
+<td>support.authoritativeDefinitions</td>
+<td></td>
+<td>Authoritative Definitions</td>
+<td>No</td>
+<td>Authoritative definitions block.</td>
+</tr>
+<tr>
+<td>support.tags</td>
+<td></td>
+<td>Tags</td>
+<td>No</td>
+<td>Tags as a list.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="team">Team</h2>
+<p>The structure describing "team" is shared between all Bitol standards, matching RFC 0016.</p>
+<h3 id="field-descriptions_3">Field Descriptions</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Key</th>
+<th>UX label</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>team</td>
+<td></td>
+<td>Team</td>
+<td>No</td>
+<td>Object representing a team.</td>
+</tr>
+<tr>
+<td>team.name</td>
+<td></td>
+<td>Name</td>
+<td>No</td>
+<td>Team name.</td>
+</tr>
+<tr>
+<td>team.description</td>
+<td></td>
+<td>Description</td>
+<td>No</td>
+<td>Team description.</td>
+</tr>
+<tr>
+<td>team.customProperties</td>
+<td></td>
+<td>Custom Properties</td>
+<td>No</td>
+<td>Custom properties block.</td>
+</tr>
+<tr>
+<td>team.authoritativeDefinitions</td>
+<td></td>
+<td>Authoritative Definitions</td>
+<td>No</td>
+<td>Authoritative definitions block.</td>
+</tr>
+<tr>
+<td>team.tags</td>
+<td></td>
+<td>Tags</td>
+<td>No</td>
+<td>Tags as a list.</td>
+</tr>
+<tr>
+<td>team.members</td>
+<td></td>
+<td>Team Members</td>
+<td>No</td>
+<td>List of members</td>
+</tr>
+<tr>
+<td>team.members.<strong>username</strong></td>
+<td>Yes</td>
+<td>Username</td>
+<td>Yes</td>
+<td>The user's username or email.</td>
+</tr>
+<tr>
+<td>team.members.name</td>
+<td></td>
+<td>Name</td>
+<td>No</td>
+<td>The user's name.</td>
+</tr>
+<tr>
+<td>team.members.description</td>
+<td></td>
+<td>Description</td>
+<td>No</td>
+<td>The user's name.</td>
+</tr>
+<tr>
+<td>team.members.role</td>
+<td></td>
+<td>Role</td>
+<td>No</td>
+<td>The user's job role; Examples might be owner, data steward. There is no limit on the role.</td>
+</tr>
+<tr>
+<td>team.members.dateIn</td>
+<td></td>
+<td>Date In</td>
+<td>No</td>
+<td>The date when the user joined the team.</td>
+</tr>
+<tr>
+<td>team.members.dateOut</td>
+<td></td>
+<td>Date Out</td>
+<td>No</td>
+<td>The date when the user ceased to be part of the team.</td>
+</tr>
+<tr>
+<td>team.members.replacedByUsername</td>
+<td></td>
+<td>Replaced By Username</td>
+<td>No</td>
+<td>The username of the user who replaced the previous user.</td>
+</tr>
+<tr>
+<td>team.members.customProperties</td>
+<td></td>
+<td>Custom Properties</td>
+<td>No</td>
+<td>Custom properties block.</td>
+</tr>
+<tr>
+<td>team.members.authoritativeDefinitions</td>
+<td></td>
+<td>Authoritative Definitions</td>
+<td>No</td>
+<td>Authoritative definitions block.</td>
+</tr>
+<tr>
+<td>team.members.tags</td>
+<td></td>
+<td>Tags</td>
+<td>No</td>
+<td>Tags as a list.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ancillary-objects">Ancillary Objects</h2>
+<h3 id="custom-properties">Custom Properties</h3>
+<p>The structure describing "Custom Properties" is shared between all Bitol standards.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Key</th>
+<th>UX label</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customProperties</td>
+<td></td>
+<td>Custom Properties</td>
+<td>No</td>
+<td>A list of key/value pairs for custom properties.</td>
+</tr>
+<tr>
+<td>customProperties.<strong>property</strong></td>
+<td>Yes</td>
+<td>Property</td>
+<td>No</td>
+<td>The name of the key. Names should be in camel case–the same as if they were permanent properties in the contract.</td>
+</tr>
+<tr>
+<td>customProperties.value</td>
+<td></td>
+<td>Value</td>
+<td>No</td>
+<td>The value of the key.</td>
+</tr>
+<tr>
+<td>customProperties.description</td>
+<td></td>
+<td>Description</td>
+<td>No</td>
+<td>Optional description.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="authoritative-definitions">Authoritative Definitions</h3>
+<p>The structure describing "Authoritative Definitions" is shared between all Bitol standards.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Key</th>
+<th>UX label</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>authoritativeDefinitions</td>
+<td></td>
+<td>Link</td>
+<td>No</td>
+<td>A list of type/link pairs for authoritative definitions.</td>
+</tr>
+<tr>
+<td>authoritativeDefinitions.<strong>type</strong></td>
+<td>Yes</td>
+<td>Definition type</td>
+<td>Yes</td>
+<td>Type of definition for authority. Recommended values are: <code>businessDefinition</code>, <code>transformationImplementation</code>, <code>videoTutorial</code>, <code>tutorial</code>, and <code>implementation</code>. At the root level, a type can also be <code>canonicalUrl</code> to indicate a reference to the product's last version.</td>
+</tr>
+<tr>
+<td>authoritativeDefinitions.url</td>
+<td></td>
+<td>URL to definition</td>
+<td>Yes</td>
+<td>URL to the authority.</td>
+</tr>
+<tr>
+<td>authoritativeDefinitions.description</td>
+<td></td>
+<td>Description</td>
+<td>No</td>
+<td>Optional description.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="other-properties">Other Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Key</th>
+<th>UX label</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>productCreatedTs</td>
+<td></td>
+<td>Product Created UTC</td>
+<td>No</td>
+<td>Timestamp in UTC of when the data contract was created, using ISO 8601.</td>
+</tr>
+</tbody>
+</table>
+<p>All trademarks are the property of their respective owners. </p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="home/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="examples/customer-data-product/" class="md-footer__link md-footer__link--next" aria-label="Next: Customer Data Product">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Customer Data Product
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://join.slack.com/t/aidaug/shared_invite/zt-2d6ypx776-YGqtXwlSlCANhn2EWDmNGQ" target="_blank" rel="noopener" title="join.slack.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M94.1 315.1c0 25.9-21.2 47.1-47.1 47.1S0 341 0 315.1 21.2 268 47.1 268h47.1v47.1zm23.7 0c0-25.9 21.2-47.1 47.1-47.1s47.1 21.2 47.1 47.1v117.8c0 25.9-21.2 47.1-47.1 47.1s-47.1-21.2-47.1-47.1zm47.1-189c-25.9 0-47.1-21.2-47.1-47.1s21.2-47 47.1-47S212 53.2 212 79.1v47.1h-47.1zm0 23.7c25.9 0 47.1 21.2 47.1 47.1S190.8 244 164.9 244H47.1C21.2 244 0 222.8 0 196.9s21.2-47.1 47.1-47.1zm189 47.1c0-25.9 21.2-47.1 47.1-47.1s47 21.2 47 47.1-21.2 47.1-47.1 47.1h-47.1v-47.1zm-23.7 0c0 25.9-21.2 47.1-47.1 47.1S236 222.8 236 196.9V79.1c0-25.9 21.2-47.1 47.1-47.1s47.1 21.2 47.1 47.1zm-47.1 189c25.9 0 47.1 21.2 47.1 47.1s-21.2 47-47.1 47-47.1-21.2-47.1-47.1v-47.1h47.1zm0-23.7c-25.9 0-47.1-21.2-47.1-47.1s21.2-47.1 47.1-47.1h117.8c25.9 0 47.1 21.2 47.1 47.1s-21.2 47.1-47.1 47.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/bitol-io" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/bitol-io/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.top", "navigation.footer", "navigation.path", "content.code.copy", "content.code.select", "content.tabs.link", "toc.integrate", "toc.follow"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>
