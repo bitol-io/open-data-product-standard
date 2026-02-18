@@ -7,7 +7,7 @@ image: "https://raw.githubusercontent.com/bitol-io/artwork/main/horizontal/color
 # Open Data Product Standard
 
 ## Executive Summary
-This document describes the keys and values expected in a YAML data product, per the **Open Data Product Standard** (ODPS). The Open Data Product Standard YAML file serves as the primary configuration and documentation for data products within your organization. This document explains each section of the standard, its purpose, and how to properly write it.
+This document describes the keys and values expected in a YAML data product, per the **Open Data Product Standard** (ODPS). The ODPS YAML file serves as the primary configuration and documentation for data products within your organization. This document explains each section of the standard, its purpose, and how to properly write it.
 
 ## Table of content
 
@@ -69,7 +69,7 @@ tags: ['customer']
 
 ## Product information
 
-Describe the core of the product.
+Describe the core of the product, including the input and output ports.
 
 ### Example
 
@@ -132,12 +132,12 @@ outputPorts: # Promises [Required]
 | inputPorts.tags                      |     | Tags                      | No       | Tags.                                                                                                                                                                                      |
 | outputPorts                          |     | Output Ports              | Yes      | List of objects describing an output port. You need at least one, as a data product without output is useless.                                                                             |
 | outputPorts.**name**                 | Yes | Name                      | Yes      |                                                                                                                                                                                            |
-| outputPorts.version                  |     | Version                   | No       | Version of the data contract associated to this output port, becomes the version of the output port. |
+| outputPorts.version                  |     | Version                   | No       | Version of the data contract associated to this output port, becomes the version of the output port.                                                                                       |
 | outputPorts.contractId               |     | Contract Id               | No       |                                                                                                                                                                                            |
 | outputPorts.type                     |     | Type                      | No       | There can be different types of output ports, each automated and handled differently. Here you can indicate the type.                                                                      |
 | outputPorts.sbom                     |     | SBOM                      | No       | Software Bill of Material.                                                                                                                                                                 |
 | outputPorts.sbom.type                |     | Type of SBOM              | No       | `external` is the default and only supported value.                                                                                                                                        |
-| outputPorts.sbom.url | | URL | No | URL to download the Software Bill of Materials.                                                                                                                                                                 |
+| outputPorts.sbom.url                 |     | URL                       | No       | URL to download the Software Bill of Materials.                                                                                                                                            |
 | outputPorts.description              |     | Description               | No       | Human-readable short description of the output port.                                                                                                                                       |
 | outputPorts.customProperties         |     | Custom properties         | No       | Custom properties.                                                                                                                                                                         |
 | outputPorts.authoritativeDefinitions |     | Authoritative Definitions | No       | Authoritative definitions.                                                                                                                                                                 |
