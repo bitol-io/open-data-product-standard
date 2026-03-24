@@ -7,7 +7,7 @@ image: "https://raw.githubusercontent.com/bitol-io/artwork/main/horizontal/color
 # Open Data Product Standard
 
 ## Executive Summary
-This document describes the keys and values expected in a YAML data product, per the **Open Data Product Standard** (ODPS). The Open Data Product Standard YAML file serves as the primary configuration and documentation for data products within your organization. This document explains each section of the standard, its purpose, and how to properly write it.
+This document describes the keys and values expected in a YAML data product, per the **Open Data Product Standard** (ODPS). The ODPS YAML file serves as the primary configuration and documentation for data products within your organization. This document explains each section of the standard, its purpose, and how to properly write it.
 
 ## Table of content
 
@@ -69,7 +69,7 @@ tags: ['customer']
 
 ## Product information
 
-Describe the core of the product.
+Describe the core of the product, including the input and output ports.
 
 ### Example
 
@@ -92,32 +92,32 @@ outputPorts: # Promises [Required]
 - name: rawtransactions
   description: "Raw Transactions"
   type: tables
-  version: 1.0.0 # [Required]
+  version: v1.0.0 # [Required]
   contractId: c2798941-1b7e-4b03-9e0d-955b1a872b32 # [Required]
 - name: rawtransactions
   description: "Raw Transactions"
   type: tables
-  version: 2.0.0 # [Required]
+  version: v2.0.0 # [Required]
   contractId: c2798941-1b7e-4b03-9e0d-955b1a872b33 # [Required]
   sbom: # The SBOM can/should be at the version level [Optional]
   - type: "external" # default
     url: "https://mysbomserver/mysbom"
   inputContracts: # or dependencies [Optional]
   - id: dbb7b1eb-7628-436e-8914-2a00638ba6db # or contractId
-    version: 2.0.0
+    version: v2.0.0
   - id: ec2a112d-5cfe-49f3-8760-f9cfb4597544
-    version: 1.0.0
+    version: v1.0.0
         
 - name: consolidatedtransactions 
   description: "Consolidated transactions"
   type: tables
-  version: 1.0.0
+  version: v1.0.0
   contractId: a44978be-1fe0-4226-b840-1b715bc25c63
     
 - name: fulltransactionswithreturns 
   description: "Full transactions with returns"
   type: tables
-  version: 0.3.0
+  version: v0.3.0
   contractId: ef769969-0cbe-4188-876f-bb00abadaee4
 ```
 
@@ -132,10 +132,13 @@ outputPorts: # Promises [Required]
 | inputPorts.tags                      |     | Tags                      | No       | Tags.                                                                                                                                                                                      |
 | outputPorts                          |     | Output Ports              | Yes      | List of objects describing an output port. You need at least one, as a data product without output is useless.                                                                             |
 | outputPorts.**name**                 | Yes | Name                      | Yes      |                                                                                                                                                                                            |
-| outputPorts.version                  |     | Version                   | No       | For each version, a different instance of the output port is listed. The combination of the name and version is the key. A new (major) version would be a new output port, for simplicity. |
+| outputPorts.version                  |     | Version                   | No       | Version of the data contract associated to this output port, becomes the version of the output port.                                                                                       |
 | outputPorts.contractId               |     | Contract Id               | No       |                                                                                                                                                                                            |
 | outputPorts.type                     |     | Type                      | No       | There can be different types of output ports, each automated and handled differently. Here you can indicate the type.                                                                      |
-| outputPorts.description              |     | Description               | No       | Human readable short description of the output port.                                                                                                                                       |
+| outputPorts.sbom                     |     | SBOM                      | No       | Software Bill of Material.                                                                                                                                                                 |
+| outputPorts.sbom.type                |     | Type of SBOM              | No       | `external` is the default and only supported value.                                                                                                                                        |
+| outputPorts.sbom.url                 |     | URL                       | No       | URL to download the Software Bill of Materials.                                                                                                                                            |
+| outputPorts.description              |     | Description               | No       | Human-readable short description of the output port.                                                                                                                                       |
 | outputPorts.customProperties         |     | Custom properties         | No       | Custom properties.                                                                                                                                                                         |
 | outputPorts.authoritativeDefinitions |     | Authoritative Definitions | No       | Authoritative definitions.                                                                                                                                                                 |
 | outputPorts.tags                     |     | Tags                      | No       | Tags.                                                                                                                                                                                      |
