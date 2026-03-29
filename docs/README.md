@@ -240,8 +240,8 @@ The structure describing "Authoritative Definitions" is shared between all Bitol
 
 ## Other Properties
 
-| Key              | Key | UX label            | Required | Description                                                             |
-|------------------|-----|---------------------|----------|-------------------------------------------------------------------------|
-| productCreatedTs |     | Product Created UTC | No       | Timestamp in UTC of when the data contract was created, using ISO 8601. |
+| Key              | Key | UX label            | Required | Description                                                            |
+|------------------|-----|---------------------|----------|------------------------------------------------------------------------|
+| productCreatedTs |     | Product Created UTC | No       | Timestamp in UTC of when the data product was created, using ISO 8601. |
 
 All trademarks are the property of their respective owners. 
