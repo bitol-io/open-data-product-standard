@@ -17,4 +17,4 @@
 | [Peter Flook](https://www.linkedin.com/in/peter-flook-bbb20ab2/) | [Data Catering](https://data.catering/) |
 | Simon Harrer, Dr.                                                |                                         |
 | Todd Nemanich                                                    |                                         |
-| Tom De Wolf                                                      |                                         |
+| [Tom De Wolf](https://www.linkedin.com/in/tomdw)                 |                                         |

@@ -97,7 +97,7 @@
     "productCreatedTs": {
       "type": "string",
       "format": "date-time",
-      "description": "Timestamp in UTC of when the data contract was created, using ISO 8601."
+      "description": "Timestamp in UTC of when the data product was created, using ISO 8601."
     }
   },
   "$defs": {
