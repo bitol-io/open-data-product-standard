@@ -52,7 +52,16 @@ theme:
 
 nav:
   - Home: 'home.md'
-  - Standard: 'README.md'
+  - Standard:
+      - 'README.md'
+      - Fundamentals: 'fundamentals.md'
+      - Product Information: 'product-information.md'
+      - Context: 'context.md'
+      - Management Ports: 'management-ports.md'
+      - Support: 'support-communication-channels.md'
+      - Team: 'team.md'
+      - Custom & Other Properties: 'custom-other-properties.md'
+      - Authoritative Definitions: 'authoritative-definitions.md'
   - Examples:
     - 'examples/README.md'
     - '...'
