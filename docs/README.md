@@ -13,6 +13,7 @@ This document describes the keys and values expected in a YAML data product, per
 
 1. [Fundamentals](#fundamentals)
 1. [Product Information](#product-information)
+1. [Context (AI and semantic guidance)](#context)
 1. [Management Ports](#management-ports)
 1. [Support and Communication Channels](#support-and-communication-channels)
 1. [Team](#team)
@@ -27,11 +28,12 @@ The core metadata section defines the fundamental identifying information requir
 ### Example
 
 ```yaml
-apiVersion: v1.0.0
+apiVersion: v1.1.0
 kind: DataProduct
 
 name: Customer Data Product
 id: fbe8d147-28db-4f1d-bedf-a3fe9f458427
+type: aggregate
 domain: seller
 status: draft
 tenant: RetailCorp
@@ -48,14 +50,16 @@ tags: ['customer']
 
 | Key                                  | Key | UX label                  | Required | Description                                                                                                   | Example                              |
 |--------------------------------------|-----|---------------------------|----------|---------------------------------------------------------------------------------------------------------------|--------------------------------------|
-| apiVersion                           |     | Standard version          | Yes      | Version of the standard used to build data product. Default value is `v1.0.0`.                                | v1.0.0                               |
+| apiVersion                           |     | Standard version          | Yes      | Version of the standard used to build data product. Default value is `v1.1.0`.                                | v1.1.0                               |
 | kind                                 |     | Kind                      | Yes      | The kind of file this is. Valid value is `DataProduct`.                                                       | DataProduct                          |
 | **id**                               | Yes | ID                        | Yes      | A unique identifier used to reduce the risk of dataset name collisions, such as a UUID.                       | 064c4630-8aad-4dc0-ba95-0f69940e6b18 |
 | name                                 |     | Name                      | No       | Name of the data product.                                                                                     |                                      |
 | version                              |     | Version                   | No       | Current version of the data product. Not required, but highly recommended.                                    | v1.0.0                               |
 | status                               |     | Status                    | Yes      | Current status of the data product. Valid values are "proposed", "draft", "active", "deprecated", "retired".  |                                      |
 | domain                               |     | Domain                    | No       | Business domain                                                                                               | Customer                             |
+| type                                 |     | Type                      | No       | Architectural type of the data product. Common values: `sourceAligned`, `aggregate`, `consumerAligned`. Organizations may define custom types. (Added in v1.1.0.) | aggregate                            |
 | tenant                               |     | Tenant                    | No       | Organization identifier                                                                                       | RetailCorp                           |
+| context                              |     | Context                   | No       | AI and semantic context block. See [Context](#context). (Added in v1.1.0.)                                    |                                      |
 | authoritativeDefinitions             |     | Authoritative Definitions | No       | List of links to sources that provide more details on the data contract.                                      |                                      |
 | description                          |     | Description               | No       | Object containing the descriptions.                                                                           |                                      |
 | description.purpose                  |     | Purpose                   | No       | Intended purpose for the provided data.                                                                       |                                      |
@@ -143,6 +147,58 @@ outputPorts: # Promises [Required]
 | outputPorts.authoritativeDefinitions |     | Authoritative Definitions | No       | Authoritative definitions.                                                                                                                                                                 |
 | outputPorts.tags                     |     | Tags                      | No       | Tags.                                                                                                                                                                                      |
 
+
+## Context
+
+Added in **ODPS v1.1.0** (RFC-0038). The `context` block provides structured, human- and machine-readable guidance for AI agents, LLMs, BI tools, and semantic layer platforms. It is optional and additive.
+
+In ODPS, `context` is applicable at two levels:
+
+- **Data product (top level)** — overall AI context for the product: which questions it can answer, which output port to use for what purpose.
+- **Output port** — guidance on how to consume a specific port: access patterns, recommended query approach, format hints.
+
+Input ports do not define their own `context`. AI agents consuming a data product should refer to the `context` defined on the ODCS data contract linked from the input port.
+
+### Example
+
+```yaml
+context:
+  instructions: >
+    This data product exposes an enterprise view of a customer for self-service
+    analytics and AI agents. Use the 'consolidatedtransactions' output port for
+    aggregated transaction history. Refresh latency is 4 hours.
+  verifiedStatements:
+    - question: "What was the total customer spend last quarter?"
+    - id: lifetime-value
+      question: "What is the lifetime value of a customer?"
+      answer: "Sum total_amount on consolidatedtransactions grouped by customer_id."
+  constraints:
+    - id: no-pii-exposure
+      constraint: "Do not expose individual customer PII; aggregate to at least country level."
+      tags: ['gdpr', 'pii']
+    - constraint: "Do not use for real-time decisions; data latency is 4 hours."
+```
+
+### Field Descriptions
+
+| Key                                          | UX label                  | Required | Description                                                                                                                                                                                          |
+|----------------------------------------------|---------------------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| context.instructions                         | Instructions              | No       | Natural language guidance for AI agents and tools on how to use this entity. Equivalent to a system prompt scoped to this level.                                                                     |
+| context.verifiedStatements                   | Verified Statements       | No       | Canonical business questions, each with an optional curated answer. Entries with `answer` should be returned verbatim when a query is semantically close; entries without `answer` are sample questions for priming. |
+| context.verifiedStatements[].id              | ID                        | No       | Stable identifier for the entry.                                                                                                                                                                     |
+| context.verifiedStatements[].**question**    | Question                  | Yes      | The canonical question.                                                                                                                                                                              |
+| context.verifiedStatements[].answer          | Answer                    | No       | The expected response or result description.                                                                                                                                                         |
+| context.verifiedStatements[].authoritativeDefinitions | Authoritative Definitions | No | Links to glossary, taxonomy, ontology, or other authoritative sources backing this entry.                                                                                                       |
+| context.verifiedStatements[].tags            | Tags                      | No       | Free-form tags for filtering, grouping, or routing entries.                                                                                                                                          |
+| context.verifiedStatements[].customProperties | Custom Properties        | No       | Custom properties.                                                                                                                                                                                   |
+| context.constraints                          | Constraints               | No       | Negative guidance: what AI agents must NOT do with this entity.                                                                                                                                      |
+| context.constraints[].id                     | ID                        | No       | Stable identifier for the constraint.                                                                                                                                                                |
+| context.constraints[].**constraint**         | Constraint                | Yes      | The constraint text (negative guidance for AI agents).                                                                                                                                               |
+| context.constraints[].authoritativeDefinitions | Authoritative Definitions | No     | Links to policy, regulation, glossary, or other authoritative sources backing this constraint.                                                                                                       |
+| context.constraints[].tags                   | Tags                      | No       | Free-form tags for filtering, grouping, or routing constraints.                                                                                                                                      |
+| context.constraints[].customProperties       | Custom Properties         | No       | Custom properties.                                                                                                                                                                                   |
+
+For the full normative specification of cascading behavior between levels, see [RFC-0038](https://github.com/bitol-io/tsc/blob/main/rfcs/approved/odcs-v3.2.0/0038-context.md).
 
 ## Management Ports
 The management ports define access points for managing the data product.
