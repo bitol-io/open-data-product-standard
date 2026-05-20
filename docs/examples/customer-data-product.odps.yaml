@@ -1,8 +1,10 @@
-apiVersion: v0.9.0
+apiVersion: v1.1.0
 kind: DataProduct
 
 name: Customer Data Product
+version: v1.1.0
 id: fbe8d147-28db-4f1d-bedf-a3fe9f458427
+type: aggregate
 domain: seller
 status: draft
 tenant: RetailCorp
@@ -14,8 +16,26 @@ description:
 
 tags: ['customer']
 
+context:
+  instructions: >
+    This data product exposes an enterprise view of a customer for self-service
+    analytics and AI agents. Use the `consolidatedtransactions` output port for
+    aggregated, joined transaction history; use `rawtransactions` only when
+    audit-level granularity is required. Refresh latency is 4 hours.
+  verifiedStatements:
+    - question: "What was the total customer spend last quarter?"
+    - question: "How many returning customers placed an order this month?"
+    - id: lifetime-value
+      question: "What is the lifetime value of a customer?"
+      answer: "Use the `consolidatedtransactions` output port (v2.0.0) and sum `total_amount` grouped by `customer_id`."
+  constraints:
+    - id: no-pii-exposure
+      constraint: "Do not expose individual customer PII; always aggregate to at least country level."
+      tags: ['gdpr', 'pii']
+    - constraint: "Do not use for real-time decisions; data latency is 4 hours."
+
 inputPorts:
-- name: payments 
+- name: payments
   version: 1.0.0
   contractId: dbb7b1eb-7628-436e-8914-2a00638ba6db
 - name: payments
@@ -61,14 +81,24 @@ outputPorts:
     version: 2.0.0
   - id: ec2a112d-5cfe-49f3-8760-f9cfb4597544
     version: 1.0.0
-        
-- name: consolidatedtransactions 
+
+- name: consolidatedtransactions
   description: "Consolidated transactions"
   type: tables
   version: 1.0.0
   contractId: a44978be-1fe0-4226-b840-1b715bc25c63
+  context:
+    instructions: >
+      Pre-joined and pre-aggregated transactions across the payments and
+      onlinetransactions sources. Prefer this port over `rawtransactions`
+      for any reporting or AI-driven analytics. Filter by `transaction_ts`
+      when querying time ranges.
+    constraints:
+      - id: no-writes
+        constraint: "Do not write INSERT, UPDATE, or DELETE statements against this port."
+      - constraint: "Do not query more than 90 days of data in a single request without pagination."
 
-- name: fulltransactionswithreturns 
+- name: fulltransactionswithreturns
   description: "Full transactions with returns"
   type: tables
   version: 0.3.0
@@ -118,4 +148,4 @@ team:
     role: "data steward"
     dateIn: "2023-02-01"
 
-productCreatedTs: "2023-01-15T10:30:00Z" 
+productCreatedTs: "2023-01-15T10:30:00Z"
