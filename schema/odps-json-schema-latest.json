@@ -3,7 +3,7 @@
   "title": "Open Data Product Standard (ODPS)",
   "description": "An open data product standard descriptor to enable defining data products.",
   "type": "object",
-  "required": ["apiVersion", "kind", "id", "status"],
+  "required": ["apiVersion", "kind", "id"],
   "additionalProperties": false,
   "properties": {
     "apiVersion": {
