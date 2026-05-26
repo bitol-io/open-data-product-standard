@@ -1,3 +1,8 @@
+<!--
+Copyright 2026 The Bitol Contributors
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # Examples
 
 This directory contains examples of Open Data Product Standard (ODPS) files.

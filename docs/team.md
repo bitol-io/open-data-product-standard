@@ -3,6 +3,11 @@ title: "Team"
 description: "The team responsible for the data product."
 ---
 
+<!--
+Copyright 2026 The Bitol Contributors
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # Team
 
 The structure describing the team is shared between all Bitol standards and follows the [ODCS Team structure](https://bitol-io.github.io/open-data-contract-standard/latest/team/), matching RFC 0016.
