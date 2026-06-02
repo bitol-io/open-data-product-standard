@@ -3,6 +3,11 @@ title: "Management Ports"
 description: "Access points for managing the data product."
 ---
 
+<!--
+Copyright 2026 The Bitol Contributors
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # Management Ports
 
 The management ports define access points for managing the data product.

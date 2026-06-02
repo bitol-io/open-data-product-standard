@@ -3,6 +3,11 @@ title: "Fundamentals"
 description: "Fundamental identifying information for the data product."
 ---
 
+<!--
+Copyright 2026 The Bitol Contributors
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # Fundamentals
 
 The core metadata section defines the fundamental identifying information required for the data product.

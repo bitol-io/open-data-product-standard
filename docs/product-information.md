@@ -3,6 +3,11 @@ title: "Product Information"
 description: "Input and output ports of the data product."
 ---
 
+<!--
+Copyright 2026 The Bitol Contributors
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # Product Information
 
 Describe the core of the product, including the input and output ports.

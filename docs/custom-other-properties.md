@@ -3,6 +3,11 @@ title: "Custom & Other Properties"
 description: "Custom properties and other properties of the data product."
 ---
 
+<!--
+Copyright 2026 The Bitol Contributors
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # Custom & Other Properties
 
 This section covers custom properties and other properties you may find in a data product.
