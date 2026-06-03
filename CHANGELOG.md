@@ -10,6 +10,7 @@ This document tracks the history and evolution of the **Open Data Product Standa
 
 * Add optional top-level `type` field categorising data products by architectural alignment (e.g., `sourceAligned`, `aggregate`, `consumerAligned`) — RFC-0029.
 * Add optional `context` block at the data product and output port levels for AI / semantic interoperability (instructions, verifiedStatements, constraints) — RFC-0038, shared with ODCS v3.2.0.
+* Add optional `synonyms` array at the data product and output port levels, recording alternative names for catalogs, AI/LLM tools, and natural language interfaces. Each entry has a required `synonym` plus optional `id`, `description`, `locale` (BCP 47), `source`, `status`, and `customProperties` — RFC-0041, shared with ODCS v3.2.0.
 * Every object inside an array now carries an optional `id` for stable, refactor-safe references — aligned with ODCS.
 * `inputPorts` and `outputPorts` now require only `name`; `version` and `contractId` are optional, and `sbom` no longer requires `url`.
 * Documentation: modernize the full customer example to v1.1.0, including `type` and `context` (#15).

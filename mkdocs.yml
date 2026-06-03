@@ -65,6 +65,7 @@ nav:
       - Team: 'team.md'
       - Custom & Other Properties: 'custom-other-properties.md'
       - Authoritative Definitions: 'authoritative-definitions.md'
+      - Synonyms: 'synonyms.md'
   - Examples:
     - 'examples/README.md'
     - '...'

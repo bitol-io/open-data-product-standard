@@ -26,6 +26,9 @@
       "type": "string",
       "description": "Name of the data product."
     },
+    "synonyms": {
+      "$ref": "#/$defs/Synonyms"
+    },
     "version": {
       "type": "string",
       "description": "Current version of the data product. Not required, but highly recommended."
@@ -172,6 +175,52 @@
       },
       "required": ["property", "value"]
     },
+    "Synonyms": {
+      "type": "array",
+      "description": "A list of alternative names for the object. See RFC 0041.",
+      "items": {
+        "$ref": "#/$defs/Synonym"
+      }
+    },
+    "Synonym": {
+      "type": "object",
+      "description": "An alternative name for a named object, helping catalogs, AI/LLM tools, and natural language interfaces resolve business vocabulary to the underlying object. See RFC 0041.",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "A unique identifier for the synonym, useful when referencing or deduplicating synonyms across tools. Recommended for elements that will be referenced."
+        },
+        "synonym": {
+          "type": "string",
+          "description": "The synonymous term."
+        },
+        "description": {
+          "type": "string",
+          "description": "Short human-readable note about when or why this synonym is used."
+        },
+        "locale": {
+          "type": "string",
+          "description": "BCP 47 language tag (e.g., `en-US`, `fr-FR`) when the synonym is language-specific."
+        },
+        "source": {
+          "type": "string",
+          "description": "Origin of the synonym (e.g., `glossary`, `finance-team`, `legacy-system`)."
+        },
+        "status": {
+          "type": "string",
+          "description": "Lifecycle status of the synonym (e.g., `active`, `deprecated`)."
+        },
+        "customProperties": {
+          "type": "array",
+          "description": "Custom properties block.",
+          "items": {
+            "$ref": "#/$defs/CustomProperty"
+          }
+        }
+      },
+      "required": ["synonym"]
+    },
     "AuthoritativeDefinition": {
       "type": "object",
       "description": "A type/link pair for authoritative definitions.",
@@ -281,6 +330,9 @@
           "items": {
             "$ref": "#/$defs/InputContract"
           }
+        },
+        "synonyms": {
+          "$ref": "#/$defs/Synonyms"
         },
         "tags": {
           "$ref": "#/$defs/Tags"

@@ -12,6 +12,15 @@ domain: seller
 status: draft
 tenant: RetailCorp
 
+synonyms:
+  - synonym: Customer 360
+  - synonym: Golden customer record
+    source: data-governance
+  - id: client-fr
+    synonym: Référentiel client
+    locale: fr-FR
+    description: French name used by EU subsidiaries.
+
 description:
   purpose: Enterprise view of a customer.
   limitations: No known limitations.
@@ -90,6 +99,12 @@ outputPorts:
   type: tables
   version: 1.0.0
   contractId: a44978be-1fe0-4226-b840-1b715bc25c63
+  synonyms:
+    - synonym: Consolidated transactions
+    - synonym: Joined transactions
+      locale: en-US
+    - synonym: Transactions consolidées
+      locale: fr-FR
   context:
     instructions: >
       Pre-joined and pre-aggregated transactions across the payments and
