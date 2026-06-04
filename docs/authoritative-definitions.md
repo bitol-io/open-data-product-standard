@@ -3,6 +3,11 @@ title: "Authoritative Definitions"
 description: "Reference external sources of truth from a data product."
 ---
 
+<!--
+Copyright 2026 The Bitol Contributors
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # Authoritative Definitions
 
 Authoritative Definitions are an essential part of the data product. They allow to delegate the definition or authority to a third-party system like an enterprise catalog, repository, etc. The structure describing authoritative definitions is shared between all Bitol standards and follows the [ODCS Authoritative Definitions structure](https://bitol-io.github.io/open-data-contract-standard/latest/authoritative-definitions/). This block is available in many sections.

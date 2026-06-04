@@ -1,3 +1,8 @@
+<!--
+Copyright 2026 The Bitol Contributors
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # ODPS JSON Schema
 
 You will find all the versions of the Open Data Product Standard (ODPS) JSON Schema files here. Each version will be 

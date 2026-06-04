@@ -3,6 +3,11 @@ title: "Product Information"
 description: "Input and output ports of the data product."
 ---
 
+<!--
+Copyright 2026 The Bitol Contributors
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # Product Information
 
 Describe the core of the product, including the input and output ports.
@@ -79,6 +84,7 @@ outputPorts: # Promises [Required]
 | outputPorts[].contractId                   | string | Contract Id               | No       | Identifier of the data contract associated with this output port.                                                                                                          |
 | outputPorts[].version                      | string | Version                   | No       | Version of the data contract associated to this output port, becomes the version of the output port. The combination of `name` and `version` is the key of the input port. |
 | outputPorts[].context                      | object | Context                   | No       | AI and semantic context for consuming this output port. See [Context](context.md). (Added in v1.1.0.)                                                                      |
+| outputPorts[].synonyms                     | array  | Synonyms                  | No       | Alternative names for this output port. See [Synonyms](synonyms.md). (Added in v1.1.0.)                                                                                    |
 | outputPorts[].authoritativeDefinitions     | array  | Authoritative Definitions | No       | Authoritative definitions.                                                                                                                                                 |
 | outputPorts[].tags                         | array  | Tags                      | No       | Tags.                                                                                                                                                                      |
 | outputPorts[].customProperties             | array  | Custom properties         | No       | Custom properties.                                                                                                                                                         |
