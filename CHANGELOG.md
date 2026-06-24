@@ -6,7 +6,9 @@ image: "https://raw.githubusercontent.com/bitol-io/artwork/main/horizontal/color
 
 This document tracks the history and evolution of the **Open Data Product Standard**.
 
-# v1.1.0 - DRAFT
+# v1.1.0 "Peter Flook" - DRAFT
+
+This release is dedicated to the memory of our friend and longtime contributor **Peter Flook**, whose work shaped the Bitol standards — from data quality testing to schema validation, documentation, and vendor onboarding. We carry his contributions forward in this version and beyond.
 
 * Add optional top-level `type` field categorising data products by architectural alignment (e.g., `sourceAligned`, `aggregate`, `consumerAligned`) — RFC-0029.
 * Add optional `context` block at the data product and output port levels for AI / semantic interoperability (instructions, verifiedStatements, constraints) — RFC-0038, shared with ODCS v3.2.0.
