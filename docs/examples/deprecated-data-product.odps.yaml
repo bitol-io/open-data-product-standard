@@ -1,7 +1,7 @@
 # Copyright 2026 The Bitol Contributors
 # SPDX-License-Identifier: Apache-2.0
 
-# Demonstrates RFC-0028: the optional `deprecated` boolean on the data product
+# Demonstrates RFC-0051: the optional `deprecated` boolean on the data product
 # and on input, output, and management ports. Defaults to false.
 
 apiVersion: v1.1.0
