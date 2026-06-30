@@ -10,7 +10,7 @@ SPDX-License-Identifier: Apache-2.0
 
 # Deprecated
 
-`deprecated` is an optional boolean that signals an element is no longer recommended for use. It defaults to `false` when not specified. The flag is shared across Bitol standards (see the [ODCS Deprecated structure](https://bitol-io.github.io/open-data-contract-standard/latest/schema/#deprecated)). In ODPS, `deprecated` is allowed on the data product itself and on its input ports, output ports, and management ports. Introduced in v1.1.0 ([RFC 0028](https://github.com/bitol-io/tsc/blob/main/rfcs/approved/odps-v1.1.0/0028-deprecated-flag.md)).
+`deprecated` is an optional boolean that signals an element is no longer recommended for use. It defaults to `false` when not specified. The flag is shared across Bitol standards (see the [ODCS Deprecated structure](https://bitol-io.github.io/open-data-contract-standard/latest/schema/#deprecated)). In ODPS, `deprecated` is allowed on the data product itself and on its input ports, output ports, and management ports. Introduced in v1.1.0 ([RFC 0051](https://github.com/bitol-io/tsc/blob/main/rfcs/approved/odps-v1.1.0/0051-deprecated-flag.md)).
 
 Deprecated elements remain documented and validated for backward compatibility; implementations MAY warn when they are used. Use the `description` field to point to a replacement and provide migration guidance.
 
