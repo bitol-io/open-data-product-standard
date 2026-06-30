@@ -66,6 +66,7 @@ nav:
       - Custom & Other Properties: 'custom-other-properties.md'
       - Authoritative Definitions: 'authoritative-definitions.md'
       - Synonyms: 'synonyms.md'
+      - Deprecated: 'deprecated.md'
   - Examples:
     - 'examples/README.md'
     - '...'
