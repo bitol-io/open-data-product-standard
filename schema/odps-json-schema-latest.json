@@ -26,6 +26,11 @@
       "type": "string",
       "description": "Name of the data product."
     },
+    "deprecated": {
+      "type": "boolean",
+      "description": "Indicates this data product is deprecated and should not be used in new implementations. Defaults to false.",
+      "default": false
+    },
     "synonyms": {
       "$ref": "#/$defs/Synonyms"
     },
@@ -171,6 +176,11 @@
         "description": {
           "type": "string",
           "description": "Optional description."
+        },
+        "vendor": {
+          "type": "string",
+          "description": "Identifies the vendor, provider, or external system associated with this custom property. SHOULD be a stable, lowercase identifier matching ^[a-z0-9][a-z0-9-]*$ (e.g. confluent, zeenea, atlan, soda). Tools MUST preserve unknown vendor values.",
+          "examples": ["confluent", "zeenea", "atlan", "soda"]
         }
       },
       "required": ["property", "value"]
@@ -252,6 +262,11 @@
       "description": "An input port describing expectations.",
       "additionalProperties": false,
       "properties": {
+        "deprecated": {
+          "type": "boolean",
+          "description": "Indicates this input port is deprecated and should not be used in new implementations. Defaults to false.",
+          "default": false
+        },
         "id": {
           "type": "string",
           "description": "A unique identifier for the element used to create stable, refactor-safe references. Recommended for elements that will be referenced."
@@ -293,6 +308,11 @@
       "description": "An output port describing promises.",
       "additionalProperties": false,
       "properties": {
+        "deprecated": {
+          "type": "boolean",
+          "description": "Indicates this output port is deprecated and should not be used in new implementations. Defaults to false.",
+          "default": false
+        },
         "id": {
           "type": "string",
           "description": "A unique identifier for the element used to create stable, refactor-safe references. Recommended for elements that will be referenced."
@@ -399,6 +419,11 @@
       "description": "Management port for managing the data product.",
       "additionalProperties": false,
       "properties": {
+        "deprecated": {
+          "type": "boolean",
+          "description": "Indicates this management port is deprecated and should not be used in new implementations. Defaults to false.",
+          "default": false
+        },
         "id": {
           "type": "string",
           "description": "A unique identifier for the element used to create stable, refactor-safe references. Recommended for elements that will be referenced."
