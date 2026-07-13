@@ -67,6 +67,7 @@ nav:
       - Authoritative Definitions: 'authoritative-definitions.md'
       - Synonyms: 'synonyms.md'
       - Deprecated: 'deprecated.md'
+      - Variables: 'variables.md'
   - Examples:
     - 'examples/README.md'
     - '...'
