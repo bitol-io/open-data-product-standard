@@ -12,6 +12,8 @@ SPDX-License-Identifier: Apache-2.0
 
 Describe the core of the product, including the input and output ports.
 
+Any string value MAY contain `${VAR_NAME}` references resolved at runtime by tooling — useful for environment-specific values; see [Variables](variables.md). (Added in v1.1.0.)
+
 [Back to TOC](README.md)
 
 ## Example
