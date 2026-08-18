@@ -12,6 +12,8 @@ SPDX-License-Identifier: Apache-2.0
 
 The core metadata section defines the fundamental identifying information required for the data product.
 
+Any string value MAY contain `${VAR_NAME}` references resolved at runtime by tooling; see [Variables](variables.md). (Added in v1.1.0.)
+
 [Back to TOC](README.md)
 
 ## Example
