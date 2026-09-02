@@ -86,8 +86,25 @@ outputPorts:
     - type: "data_dictionary"
       url: "https://mydata/dictionary"
   sbom:
-  - type: "external"
-    url: "https://mysbomserver/mysbom"
+  - id: sbom-runtime
+    type: "external"
+    url: "https://mysbomserver/transactions/runtime.cdx.json"
+    tags: ["runtime", "cyclonedx"]
+    customProperties:
+      - property: sbomFormat
+        value: CycloneDX 1.6
+      - property: buildId
+        value: build-8842
+    authoritativeDefinitions:
+      - type: implementation
+        url: "https://ci.acme.com/builds/8842"
+  - id: sbom-model
+    type: "external"
+    url: "https://mysbomserver/transactions/model.spdx.json"
+    tags: ["model", "spdx"]
+    customProperties:
+      - property: sbomFormat
+        value: SPDX 2.3
   inputContracts:
   - id: dbb7b1eb-7628-436e-8914-2a00638ba6db
     version: 2.0.0
