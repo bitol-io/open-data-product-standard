@@ -395,6 +395,17 @@
           "type": "string",
           "format": "uri",
           "description": "URL to the SBOM."
+        },
+        "tags": { "$ref": "#/$defs/Tags" },
+        "customProperties": {
+          "type": "array",
+          "description": "Custom properties block.",
+          "items": { "$ref": "#/$defs/CustomProperty" }
+        },
+        "authoritativeDefinitions": {
+          "type": "array",
+          "description": "Authoritative definitions block.",
+          "items": { "$ref": "#/$defs/AuthoritativeDefinition" }
         }
       }
     },
