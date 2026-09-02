@@ -73,6 +73,7 @@ nav:
     - '...'
   - Changelog: 'changelog.md'
   - Contributing: 'contributing.md'
+  - Vendors: 'vendors.md'
 
 extra:
   social:

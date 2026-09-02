@@ -32,6 +32,12 @@ Contributions are welcome!
 ## Articles and Other Resources
 Check out the [resources](resources.md) page.
 
+## Third-party solutions & support
+Check out the [vendors](vendors.md) page for tools and service providers supporting ODPS, such as:
+
+* [Data Product CLI](https://github.com/datacontract/dataproduct-cli) - Open Source CLI to create, lint, and publish ODPS data products.
+* [Entropy Data](https://www.entropy-data.com) - Data Product Marketplace with native ODPS support.
+
 ## Contributing to the project
 Check out the [CONTRIBUTING](./CONTRIBUTING.md) page.
 
