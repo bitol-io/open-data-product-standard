@@ -6,7 +6,7 @@ image: "https://raw.githubusercontent.com/bitol-io/artwork/main/horizontal/color
 
 This document tracks the history and evolution of the **Open Data Product Standard**.
 
-# v1.1.0 "Peter Flook" - DRAFT
+# v1.1.0 "Peter Flook" - APPROVED
 
 This release is dedicated to the memory of our friend and longtime contributor **Peter Flook**, whose work shaped the Bitol standards — from data quality testing to schema validation, documentation, and vendor onboarding. We carry his contributions forward in this version and beyond.
 
