@@ -1,6 +1,9 @@
 /.idea/
 .cache
 
+node_modules
+package-lock.json
+
 docs/changelog.md
 docs/contributing.md
 docs/home.md

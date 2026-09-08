@@ -4,6 +4,11 @@ description: "Home of Open Data Product Standard (ODPS) documentation."
 image: "https://raw.githubusercontent.com/bitol-io/artwork/main/horizontal/color/Bitol_Logo_color.svg"
 ---
 
+<!--
+Copyright 2026 The Bitol Contributors
+SPDX-License-Identifier: Apache-2.0
+-->
+
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/8149/badge)](https://www.bestpractices.dev/projects/8149)
 <a href="https://github.com/bitol-io/open-data-product-standard">
 <img alt="Stars" src="https://img.shields.io/github/stars/bitol-io/open-data-product-standard" /></a>
@@ -17,7 +22,7 @@ Welcome!
 Thanks for your interest and for taking the time to come here! ❤️
 
 ## Executive summary
-This standard describes a structure for a **data product** called Open Data Product Standard (ODPS). Its current version is v1.0.0. It is available for you as an Apache 2.0 license. Contributions are welcome!
+This standard describes a structure for a **data product** called Open Data Product Standard (ODPS). Its current version is v1.1.0. It is available for you as an Apache 2.0 license. Contributions are welcome!
 
 ## Discover the open standard
 Discover the [Open Data Product Standard](docs/README.md). This file contains some explanations and several examples. More [examples](docs/examples/README.md) can be found here. A reader-friendly version of the standard can be found on its [dedicated site](https://bitol-io.github.io/open-data-product-standard/).
@@ -57,5 +62,5 @@ If you need to cite this standard, you can use the following BibTeX entry:
 The official media (fka mime) type is:
 
 ```
-application/odps+yaml;version=1.0.0
+application/odps+yaml;version=1.1.0
 ```

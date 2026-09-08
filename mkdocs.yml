@@ -1,3 +1,6 @@
+# Copyright 2026 The Bitol Contributors
+# SPDX-License-Identifier: Apache-2.0
+
 site_name: Open Data Product Standard
 site_url: https://bitol-io.github.io/open-data-product-standard/
 repo_url: https://github.com/bitol-io/open-data-product-standard
@@ -52,7 +55,19 @@ theme:
 
 nav:
   - Home: 'home.md'
-  - Standard: 'README.md'
+  - Standard:
+      - 'README.md'
+      - Fundamentals: 'fundamentals.md'
+      - Product Information: 'product-information.md'
+      - Context: 'context.md'
+      - Management Ports: 'management-ports.md'
+      - Support: 'support-communication-channels.md'
+      - Team: 'team.md'
+      - Custom & Other Properties: 'custom-other-properties.md'
+      - Authoritative Definitions: 'authoritative-definitions.md'
+      - Synonyms: 'synonyms.md'
+      - Deprecated: 'deprecated.md'
+      - Variables: 'variables.md'
   - Examples:
     - 'examples/README.md'
     - '...'

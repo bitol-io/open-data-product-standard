@@ -17,7 +17,6 @@ If your solution supports ODPS, make a pull request!
 
 Consultancies and trainers helping organizations adopt ODPS.
 
-* [AbeaData](https://abeadata.com) - Consulting & training on data contracts and data products.
 * [AgileLab](https://www.agilelab.it) - Data consulting firm helping enterprise customers adopt data contracts and data products.
 * [codecentric](https://www.codecentric.de) - Consulting on data mesh, data products, and the adoption of open standards such as ODPS.
 

@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Copyright 2026 The Bitol Contributors
+# SPDX-License-Identifier: Apache-2.0
+
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -8,7 +11,7 @@ NC='\033[0m'
 
 script_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 project_root=$(dirname "$script_dir")
-json_schema_version=${JSON_SCHEMA_VERSION:-v1.0.0}
+json_schema_version=${JSON_SCHEMA_VERSION:-v1.1.0}
 num_failed_validation=0
 
 echo -e "${YELLOW}Open Data Product Standard (ODPS) Validation Script${NC}"

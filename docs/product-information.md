@@ -1,0 +1,112 @@
+---
+title: "Product Information"
+description: "Input and output ports of the data product."
+---
+
+<!--
+Copyright 2026 The Bitol Contributors
+SPDX-License-Identifier: Apache-2.0
+-->
+
+# Product Information
+
+Describe the core of the product, including the input and output ports.
+
+Any string value MAY contain `${VAR_NAME}` references resolved at runtime by tooling — useful for environment-specific values; see [Variables](variables.md). (Added in v1.1.0.)
+
+[Back to TOC](README.md)
+
+## Example
+
+```yaml
+inputPorts: # Expectations [Optional]
+- name: payments 
+  version: v1.0.0 # [Optional]
+  contractId: dbb7b1eb-7628-436e-8914-2a00638ba6db # [Optional]
+- name: payments
+  version: v2.0.0 # [Optional]
+  contractId: dbb7b1eb-7628-436e-8914-2a00638ba6da # [Optional]
+- name: onlinetransactions
+  version: v1.0.0 # [Optional]
+  contractId: ec2a112d-5cfe-49f3-8760-f9cfb4597544 # [Optional]
+- name: onlinetransactions
+  version: v1.1.0 # [Optional]
+  contractId: ec2a112d-5cfe-49f3-8760-f9cfb4597547 # [Optional]
+
+outputPorts: # Promises [Required]
+- name: rawtransactions
+  description: "Raw Transactions"
+  type: tables
+  version: v1.0.0 # [Optional]
+  contractId: c2798941-1b7e-4b03-9e0d-955b1a872b32 # [Optional]
+- name: rawtransactions
+  description: "Raw Transactions"
+  type: tables
+  version: v2.0.0 # [Optional]
+  contractId: c2798941-1b7e-4b03-9e0d-955b1a872b33 # [Optional]
+  sbom: # The SBOM can/should be at the version level [Optional]
+  - id: sbom-runtime
+    type: "external" # default
+    url: "https://mysbomserver/mysbom"
+    tags: ["runtime", "cyclonedx"] # [Optional]
+    customProperties: # [Optional]
+    - property: sbomFormat
+      value: CycloneDX 1.6
+    authoritativeDefinitions: # [Optional]
+    - type: implementation
+      url: "https://ci.acme.com/builds/8842"
+  inputContracts: # or dependencies [Optional]
+  - id: dbb7b1eb-7628-436e-8914-2a00638ba6db # or contractId
+    version: v2.0.0
+  - id: ec2a112d-5cfe-49f3-8760-f9cfb4597544
+    version: v1.0.0
+        
+- name: consolidatedtransactions 
+  description: "Consolidated transactions"
+  type: tables
+  version: v1.0.0
+  contractId: a44978be-1fe0-4226-b840-1b715bc25c63
+    
+- name: fulltransactionswithreturns 
+  description: "Full transactions with returns"
+  type: tables
+  version: v0.3.0
+  contractId: ef769969-0cbe-4188-876f-bb00abadaee4
+```
+
+## Field Descriptions
+
+| Key                                           | Type   | UX label                  | Required | Description                                                                                                                                                                |
+| --------------------------------------------- | ------ | ------------------------- | -------- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| inputPorts                                    | array  | Input Ports               | No       | List of objects describing an input port.                                                                                                                                  |
+| inputPorts[].id                               | string | ID                        | No       | A unique identifier for the element used to create stable, refactor-safe references. Recommended for elements that will be referenced.                                     |
+| inputPorts[].**name**                         | string | Name                      | Yes      | Name of the input port.                                                                                                                                                    |
+| inputPorts[].deprecated                       | boolean | Deprecated                | No       | Indicates this input port is deprecated and should not be used in new implementations. Defaults to false. See [Deprecated](deprecated.md). (Added in v1.1.0.)              |
+| inputPorts[].contractId                       | string | Contract Id               | No       | Identifier of the data contract this input port references.                                                                                                                |
+| inputPorts[].version                          | string | Version                   | No       | Version of the referenced data contract, becomes the version of the input port. The combination of `name` and `version` is the key of the input port.                      |
+| inputPorts[].authoritativeDefinitions         | array  | Authoritative Definitions | No       | Authoritative definitions.                                                                                                                                                 |
+| inputPorts[].tags                             | array  | Tags                      | No       | Tags.                                                                                                                                                                      |
+| inputPorts[].customProperties                 | array  | Custom properties         | No       | Custom properties.                                                                                                                                                         |
+| outputPorts                                   | array  | Output Ports              | Yes      | List of objects describing an output port. You need at least one, as a data product without output is useless.                                                             |
+| outputPorts[].id                              | string | ID                        | No       | A unique identifier for the element used to create stable, refactor-safe references. Recommended for elements that will be referenced.                                     |
+| outputPorts[].**name**                        | string | Name                      | Yes      | Name of the output port.                                                                                                                                                   |
+| outputPorts[].deprecated                      | boolean | Deprecated                | No       | Indicates this output port is deprecated and should not be used in new implementations. Defaults to false. See [Deprecated](deprecated.md). (Added in v1.1.0.)             |
+| outputPorts[].type                            | string | Type                      | No       | There can be different types of output ports, each automated and handled differently. Here you can indicate the type.                                                      |
+| outputPorts[].description                     | string | Description               | No       | Human-readable short description of the output port.                                                                                                                       |
+| outputPorts[].contractId                      | string | Contract Id               | No       | Identifier of the data contract associated with this output port.                                                                                                          |
+| outputPorts[].version                         | string | Version                   | No       | Version of the data contract associated to this output port, becomes the version of the output port. The combination of `name` and `version` is the key of the input port. |
+| outputPorts[].context                         | object | Context                   | No       | AI and semantic context for consuming this output port. See [Context](context.md). (Added in v1.1.0.)                                                                      |
+| outputPorts[].synonyms                        | array  | Synonyms                  | No       | Alternative names for this output port. See [Synonyms](synonyms.md). (Added in v1.1.0.)                                                                                    |
+| outputPorts[].authoritativeDefinitions        | array  | Authoritative Definitions | No       | Authoritative definitions.                                                                                                                                                 |
+| outputPorts[].tags                            | array  | Tags                      | No       | Tags.                                                                                                                                                                      |
+| outputPorts[].customProperties                | array  | Custom properties         | No       | Custom properties.                                                                                                                                                         |
+| outputPorts[].inputContracts                  | array  | Input Contracts           | No       | Data contracts this output port depends on (its input dependencies).                                                                                                       |
+| outputPorts[].inputContracts[].**id**         | string | Contract Id               | Yes      | Identifier of the referenced data contract.                                                                                                                                |
+| outputPorts[].inputContracts[].**version**    | string | Version                   | Yes      | Version of the referenced data contract.                                                                                                                                   |
+| outputPorts[].sbom                            | array  | SBOM                      | No       | Software Bill of Material.                                                                                                                                                 |
+| outputPorts[].sbom[].id                       | string | ID                        | No       | A unique identifier for the element used to create stable, refactor-safe references. Recommended for elements that will be referenced.                                     |
+| outputPorts[].sbom[].type                     | string | Type of SBOM              | No       | `external` is the default and only supported value.                                                                                                                        |
+| outputPorts[].sbom[].url                      | string | URL                       | No       | URL to download the Software Bill of Materials.                                                                                                                            |
+| outputPorts[].sbom[].authoritativeDefinitions | array  | Authoritative Definitions | No       | Authoritative definitions.                                                                                                                                                 |
+| outputPorts[].sbom[].tags                     | array  | Tags                      | No       | Tags.                                                                                                                                                                      |
+| outputPorts[].sbom[].customProperties         | array  | Custom properties         | No       | Custom properties.                                                                                                                                                         |
