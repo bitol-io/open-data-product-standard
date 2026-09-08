@@ -6,17 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="How you can contribute to the Open Data Product Standard (ODPS).">
+        <meta name="description" content="Variable interpolation in ODPS: keep secrets and environment-specific values out of the data product with ${VAR_NAME} references resolved at runtime by tooling.">
       
       
       
-        <link rel="canonical" href="https://bitol-io.github.io/open-data-product-standard/v1.0.0/contributing/">
+        <link rel="canonical" href="https://bitol-io.github.io/open-data-product-standard/v1.0.0/variables/">
       
       
-        <link rel="prev" href="../changelog/">
+        <link rel="prev" href="../deprecated/">
       
       
-        <link rel="next" href="../vendors/">
+        <link rel="next" href="../examples/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Contributing: Open Data Product Standard (ODPS) - Open Data Product Standard</title>
+        <title>Variables - Open Data Product Standard</title>
       
     
     
@@ -61,17 +61,17 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Contributing: Open Data Product Standard (ODPS) - Open Data Product Standard" />
-<meta property="og:description" content="How you can contribute to the Open Data Product Standard (ODPS)." />
-<meta property="og:image" content="https://bitol-io.github.io/open-data-product-standard/v1.0.0/assets/images/social/contributing.png" />
+<meta property="og:title" content="Variables - Open Data Product Standard" />
+<meta property="og:description" content="Variable interpolation in ODPS: keep secrets and environment-specific values out of the data product with ${VAR_NAME} references resolved at runtime by tooling." />
+<meta property="og:image" content="https://bitol-io.github.io/open-data-product-standard/v1.0.0/assets/images/social/variables.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://bitol-io.github.io/open-data-product-standard/v1.0.0/contributing/" />
+<meta property="og:url" content="https://bitol-io.github.io/open-data-product-standard/v1.0.0/variables/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="Contributing: Open Data Product Standard (ODPS) - Open Data Product Standard" />
-<meta property="twitter:description" content="How you can contribute to the Open Data Product Standard (ODPS)." />
-<meta property="twitter:image" content="https://bitol-io.github.io/open-data-product-standard/v1.0.0/assets/images/social/contributing.png" />
+<meta property="twitter:title" content="Variables - Open Data Product Standard" />
+<meta property="twitter:description" content="Variable interpolation in ODPS: keep secrets and environment-specific values out of the data product with ${VAR_NAME} references resolved at runtime by tooling." />
+<meta property="twitter:image" content="https://bitol-io.github.io/open-data-product-standard/v1.0.0/assets/images/social/variables.png" />
 </head>
   
   
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#contributing-to-open-data-product-standard" class="md-skip">
+        <a href="#variables" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Contributing: Open Data Product Standard (ODPS)
+              Variables
             
           </span>
         </div>
@@ -266,10 +266,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href=".." class="md-tabs__link">
           
   
@@ -325,11 +327,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../contributing/" class="md-tabs__link">
         
   
   
@@ -438,26 +438,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -475,7 +480,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -798,10 +803,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../variables/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variables
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -817,6 +849,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntax
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tooling behavior
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1147,19 +1243,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
         
   
   
@@ -1175,7 +1262,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1238,8 +1324,56 @@ Copyright 2026 The Bitol Contributors
 SPDX-License-Identifier: Apache-2.0
 -->
 
-<h1 id="contributing-to-open-data-product-standard">Contributing to Open Data Product Standard</h1>
-<p>Thank you for your interest in contributing to Open Data Product Standard (ODPS). Please refer to the <a href="https://github.com/bitol-io/tsc/blob/main/CONTRIBUTING.md">TSC contributing guidelines</a>.</p>
+<h1 id="variables">Variables</h1>
+<p>Any string value in a data product MAY contain one or more variable references of the form <code>${VAR_NAME}</code>, resolved at runtime by tooling. The mechanism is shared between all Bitol standards (<a href="https://github.com/bitol-io/tsc/blob/main/rfcs/approved/odps-v1.1.0/0050-variables.md">RFC 0050</a>, shared with ODCS and OORS). It keeps secrets and environment-specific values — hostnames, bucket paths, credentials — out of the document itself, so the same data product definition works across environments and is safe to store in version control. Introduced in v1.1.0.</p>
+<p>References MAY appear as a whole value or as a substring. A reference MAY carry an inline default using the POSIX <code>${VAR_NAME:-default}</code> form: the text between <code>:-</code> and the closing <code>}</code> is used verbatim when the variable is unset or empty.</p>
+<p><code>VAR_NAME</code> is an identifier chosen by the author. Resolution is intentionally left to tooling; common sources include OS environment variables, <code>.env</code> files, secret managers, and CI/CD pipeline variables.</p>
+<p><a href="../">Back to TOC</a></p>
+<h2 id="example">Example</h2>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">tenant</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${TENANT:-RetailCorp}</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">description</span><span class="p">:</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">purpose</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Orders data for ${TARGET_ENVIRONMENT:-prod} consumers.</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nt">customProperties</span><span class="p">:</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dataLakePath</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s3://${DATA_BUCKET}/orders/</span>
+</span></code></pre></div>
+<h2 id="syntax">Syntax</h2>
+<table>
+<thead>
+<tr>
+<th>Form</th>
+<th>Behavior when the variable is set</th>
+<th>Behavior when the variable is unset or empty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>${VAR_NAME}</code></td>
+<td>Replaced by the variable's value.</td>
+<td>Tooling SHOULD surface an error; it MUST NOT silently substitute an empty string.</td>
+</tr>
+<tr>
+<td><code>${VAR_NAME:-default}</code></td>
+<td>Replaced by the variable's value.</td>
+<td>Replaced by <code>default</code>, verbatim.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tooling-behavior">Tooling behavior</h2>
+<ul>
+<li>Tools MUST resolve <code>${VAR_NAME}</code> references before using the value for any purpose.</li>
+<li>If a referenced variable cannot be resolved (and no default is supplied), tools SHOULD surface an error and MUST NOT silently substitute an empty string.</li>
+<li>Tools MUST preserve unresolved <code>${VAR_NAME}</code> and <code>${VAR_NAME:-default}</code> tokens verbatim when serializing a data product back to YAML (round-trip safety).</li>
+<li>Tools MAY define their own resolution order across sources (for example, OS environment variable before <code>.env</code> file).</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Interpolation applies to <strong>string</strong> values only: a field typed as an integer or boolean in the JSON schema cannot hold a variable reference, as the unresolved token is a string and the schema rejects it.</li>
+<li>No new section or field is added to the standard: a data product using variables validates against the standard JSON schema as-is.</li>
+</ul>
+<p><a href="../">Back to TOC</a></p>
 
 
 
@@ -1280,7 +1414,7 @@ SPDX-License-Identifier: Apache-2.0
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../changelog/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Changelog">
+          <a href="../deprecated/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Deprecated">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1290,20 +1424,20 @@ SPDX-License-Identifier: Apache-2.0
                 Previous
               </span>
               <div class="md-ellipsis">
-                Changelog
+                Deprecated
               </div>
             </div>
           </a>
         
         
           
-          <a href="../vendors/" class="md-footer__link md-footer__link--next" aria-label="Next: Vendors">
+          <a href="../examples/" class="md-footer__link md-footer__link--next" aria-label="Next: Index">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Vendors
+                Index
               </div>
             </div>
             <div class="md-footer__button md-icon">
