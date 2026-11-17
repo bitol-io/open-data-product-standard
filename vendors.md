@@ -6,6 +6,7 @@ Vendors who natively support ODPS (Open Data Product Standard).
 
 A non-exhaustive, alphabetical list of organizations offering solutions natively compatible with ODPS, such as data product marketplaces, catalogs, governance platforms, and developer tooling.
 
+* [Actian Data Intelligence Platform](https://www.actian.com/data-intelligence/platform/) - A cloud-native, AI-ready solution that helps organizations discover, understand, trust, and activate their enterprise data assets at scale through intelligent metadata, governance, cataloging, and data marketplace capabilities.
 * [Data Product CLI](https://github.com/datacontract/dataproduct-cli) - Open Source CLI and Python library for ODPS data products. Supports creating data products from templates, linting them against the ODPS standard, and publishing them to a marketplace. The data product sibling of the [Data Contract CLI](https://cli.datacontract.com).
 * [Databricks Ontos](https://marketplace.databricks.com/details/8c582cfa-4c6b-4fdc-93a2-f63b35d93906/Databricks_Ontos) - Governance and metadata management application using ODCS and ODPS as the core standards for data contracts and data products.
 * [Entropy Data](https://www.entropy-data.com) - Data Product Marketplace built on data contracts and data products, with native [ODPS support](https://docs.entropy-data.com/dataproducts-odps).
